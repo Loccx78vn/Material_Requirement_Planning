@@ -170,7 +170,14 @@ gt_table <- summary_data %>%
     Count_Pass = "Total pass",
     Count_Fail = "Total fail"
   ) %>%
-  gt_theme_espn()
+   cols_align(
+    align = "center",
+    columns = everything()
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_options(
+    table.width = "80%"
+  )
 
 # Display the gt table
 gt_table
@@ -276,7 +283,14 @@ safety_stock_tbl %>%
     ),
     locations = cells_body(columns = everything())
   ) %>%
-  gt_theme_espn()
+   cols_align(
+    align = "center",
+    columns = everything()
+  ) %>% 
+  gt_theme_pff() %>% 
+  tab_options(
+    table.width = "80%"
+  )
 ```
 
 Sau khi đã có các thông số cần thiết, chúng ta sẽ bắt đầu bước **simulation - giả lập** cho số lượng hàng tồn kho trong gần 1 tháng tiếp theo. Ở đây mình sẽ xây dựng kế hoạch cho nhà kho *B*. Trong đó, hàm dưới đây mình viết giúp bạn có thể tính toán cho nhiều trường hợp với 4 đối số:
@@ -517,15 +531,19 @@ gt(result %>%
     columns = c(`Outstock cost`, `Inventory cost`, Total),
     currency = "USD"
   ) %>% 
-  gt_theme_pff() %>% 
   gt_highlight_rows(
      rows = 2,
      fill = "orange",
      bold_target_only = TRUE,
      target_col = Total
    )  %>%
+   cols_align(
+    align = "center",
+    columns = everything()
+  ) %>% 
+  gt_theme_pff() %>% 
   tab_options(
-    table.width = "100%"
+    table.width = "80%"
   )
 ```
 

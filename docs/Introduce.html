@@ -340,24 +340,11 @@ background-size: cover;
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<div class="grViz html-widget html-fill-item" id="htmlwidget-4ce93754d08fd0de3e83" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-4ce93754d08fd0de3e83">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  node [shape = rectangle, style = filled, fillcolor = lightblue]\n  \n  // Thêm tiêu đề với màu cam\n  title [label = \"Quy trình Xây dựng MRP\", shape = plaintext, fontcolor = black, fontsize = 40, fontname = \"Helvetica Bold\", fillcolor = orange]\n\n  A [label = \"1. Xác định mục tiêu và yêu cầu\"]\n  B [label = \"2. Tập hợp dữ liệu\"]\n    B1 [label = \"  - Thông tin sản phẩm\", fillcolor = lightyellow]\n    B2 [label = \"  - Tồn kho hiện tại\", fillcolor = lightyellow]\n    B3 [label = \"  - Nhu cầu sản xuất\", fillcolor = lightyellow]\n  C [label = \"3. Lựa chọn phần mềm MRP\"]\n  D [label = \"4. Xây dựng cấu trúc BOM\"]\n  E [label = \"5. Thiết lập quy trình MRP\"]\n    E1 [label = \"  - Nhập dữ liệu\", fillcolor = lightyellow]\n    E2 [label = \"  - Tính toán nhu cầu\", fillcolor = lightyellow]\n    E3 [label = \"  - Lập kế hoạch\", fillcolor = lightyellow]\n  F [label = \"6. Tính toán yêu cầu vật liệu\"]\n  G [label = \"7. Lập kế hoạch sản xuất và mua sắm\"]\n  H [label = \"8. Thực hiện và theo dõi\"]\n\n  // Kết nối tiêu đề\n  { rank = same; title }\n  title -> A\n  A -> B -> C -> D -> E -> F -> G -> H\n  B -> B1 [style=dashed, dir=back]\n  B -> B2 [style=dashed, dir=back]\n  B -> B3 [style=dashed, dir=back]\n  E -> E1 [style=dashed, dir=back]\n  E -> E2 [style=dashed, dir=back]\n  E -> E3 [style=dashed, dir=back]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-2547d29fb1ddb2de2e65" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2547d29fb1ddb2de2e65">{"x":{"diagram":"\ndigraph flowchart {\n  graph [layout = dot, rankdir = TB]\n\n  node [shape = rectangle, style = filled, fillcolor = lightblue]\n  \n  // Thêm tiêu đề với màu cam\n  title [label = \"Quy trình Xây dựng MRP\", shape = plaintext, fontcolor = black, fontsize = 40, fontname = \"Helvetica Bold\", fillcolor = orange]\n\n  A [label = \"1. Xác định mục tiêu và yêu cầu\"]\n  B [label = \"2. Tập hợp dữ liệu\"]\n    B1 [label = \"  - Thông tin sản phẩm\", fillcolor = lightyellow]\n    B2 [label = \"  - Tồn kho hiện tại\", fillcolor = lightyellow]\n    B3 [label = \"  - Nhu cầu sản xuất\", fillcolor = lightyellow]\n  C [label = \"3. Lựa chọn phần mềm MRP\"]\n  D [label = \"4. Xây dựng cấu trúc BOM\"]\n  E [label = \"5. Thiết lập quy trình MRP\"]\n    E1 [label = \"  - Nhập dữ liệu\", fillcolor = lightyellow]\n    E2 [label = \"  - Tính toán nhu cầu\", fillcolor = lightyellow]\n    E3 [label = \"  - Lập kế hoạch\", fillcolor = lightyellow]\n  F [label = \"6. Tính toán yêu cầu vật liệu\"]\n  G [label = \"7. Lập kế hoạch sản xuất và mua sắm\"]\n  H [label = \"8. Thực hiện và theo dõi\"]\n\n  // Kết nối tiêu đề\n  { rank = same; title }\n  title -> A\n  A -> B -> C -> D -> E -> F -> G -> H\n  B -> B1 [style=dashed, dir=back]\n  B -> B2 [style=dashed, dir=back]\n  B -> B3 [style=dashed, dir=back]\n  E -> E1 [style=dashed, dir=back]\n  E -> E2 [style=dashed, dir=back]\n  E -> E3 [style=dashed, dir=back]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p>Hình 3: Các bước cần có trong việc xây dựng MRP</p>
 </div>
 </div>
-
-
-
-<title>MathJax TeX Test Page</title>
-<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-</script>
-
-
-When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-
-
-
 <section id="bom-là-gì" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="bom-là-gì"><span class="header-section-number">3.1</span> BOM là gì:</h2>
 <p>Trong quy trình có nhắc đến cụm từ <strong>BOM</strong> nghĩa là <strong>Bill of Material</strong> - là một tài liệu quan trọng trong sản xuất, cung cấp danh sách chi tiết các nguyên liệu, linh kiện và bộ phận cần thiết để sản xuất một sản phẩm cụ thể. Bạn có thể hình dung là để có thể tạo một chiếc bánh thì cần phải có đầy đủ các nguyên vật liệu để làm bánh từ máy xoay bột, lò nướng, bột, trứng,… và phải được chuẩn bị đầy đủ trước khi bắt tay vào làm bánh.</p>
@@ -373,24 +360,24 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="gfahryklcy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="egzdsxftpa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#gfahryklcy table {
+#egzdsxftpa table {
   font-family: Roboto, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gfahryklcy thead, #gfahryklcy tbody, #gfahryklcy tfoot, #gfahryklcy tr, #gfahryklcy td, #gfahryklcy th {
+#egzdsxftpa thead, #egzdsxftpa tbody, #egzdsxftpa tfoot, #egzdsxftpa tr, #egzdsxftpa td, #egzdsxftpa th {
   border-style: none;
 }
 
-#gfahryklcy p {
+#egzdsxftpa p {
   margin: 0;
   padding: 0;
 }
 
-#gfahryklcy .gt_table {
+#egzdsxftpa .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -416,12 +403,12 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-left-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_caption {
+#egzdsxftpa .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gfahryklcy .gt_title {
+#egzdsxftpa .gt_title {
   color: #333333;
   font-size: 30px;
   font-weight: bold;
@@ -433,7 +420,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-bottom-width: 0;
 }
 
-#gfahryklcy .gt_subtitle {
+#egzdsxftpa .gt_subtitle {
   color: #333333;
   font-size: 16px;
   font-weight: initial;
@@ -445,7 +432,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-top-width: 0;
 }
 
-#gfahryklcy .gt_heading {
+#egzdsxftpa .gt_heading {
   background-color: #FFFFFF;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -457,13 +444,13 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-right-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_bottom_border {
+#egzdsxftpa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_col_headings {
+#egzdsxftpa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 3px;
   border-top-color: rgba(255, 255, 255, 0);
@@ -478,7 +465,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-right-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_col_heading {
+#egzdsxftpa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -498,7 +485,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   overflow-x: hidden;
 }
 
-#gfahryklcy .gt_column_spanner_outer {
+#egzdsxftpa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -510,15 +497,15 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   padding-right: 4px;
 }
 
-#gfahryklcy .gt_column_spanner_outer:first-child {
+#egzdsxftpa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gfahryklcy .gt_column_spanner_outer:last-child {
+#egzdsxftpa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gfahryklcy .gt_column_spanner {
+#egzdsxftpa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: rgba(255, 255, 255, 0);
@@ -530,11 +517,11 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   width: 100%;
 }
 
-#gfahryklcy .gt_spanner_row {
+#egzdsxftpa .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gfahryklcy .gt_group_heading {
+#egzdsxftpa .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -560,7 +547,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   text-align: left;
 }
 
-#gfahryklcy .gt_empty_group_heading {
+#egzdsxftpa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -575,15 +562,15 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   vertical-align: middle;
 }
 
-#gfahryklcy .gt_from_md > :first-child {
+#egzdsxftpa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gfahryklcy .gt_from_md > :last-child {
+#egzdsxftpa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gfahryklcy .gt_row {
+#egzdsxftpa .gt_row {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 5px;
@@ -602,7 +589,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   overflow-x: hidden;
 }
 
-#gfahryklcy .gt_stub {
+#egzdsxftpa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 80%;
@@ -615,7 +602,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   padding-right: 5px;
 }
 
-#gfahryklcy .gt_stub_row_group {
+#egzdsxftpa .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -629,15 +616,15 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   vertical-align: top;
 }
 
-#gfahryklcy .gt_row_group_first td {
+#egzdsxftpa .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gfahryklcy .gt_row_group_first th {
+#egzdsxftpa .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gfahryklcy .gt_summary_row {
+#egzdsxftpa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -647,16 +634,16 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   padding-right: 5px;
 }
 
-#gfahryklcy .gt_first_summary_row {
+#egzdsxftpa .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_first_summary_row.thick {
+#egzdsxftpa .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gfahryklcy .gt_last_summary_row {
+#egzdsxftpa .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -666,7 +653,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-bottom-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_grand_summary_row {
+#egzdsxftpa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -676,7 +663,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   padding-right: 5px;
 }
 
-#gfahryklcy .gt_first_grand_summary_row {
+#egzdsxftpa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -686,7 +673,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-top-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_last_grand_summary_row_top {
+#egzdsxftpa .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -696,11 +683,11 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-bottom-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_striped {
+#egzdsxftpa .gt_striped {
   background-color: #F5F5F5;
 }
 
-#gfahryklcy .gt_table_body {
+#egzdsxftpa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -709,7 +696,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-bottom-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_footnotes {
+#egzdsxftpa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -723,7 +710,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-right-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_footnote {
+#egzdsxftpa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -732,7 +719,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   padding-right: 5px;
 }
 
-#gfahryklcy .gt_sourcenotes {
+#egzdsxftpa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -746,7 +733,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   border-right-color: #D3D3D3;
 }
 
-#gfahryklcy .gt_sourcenote {
+#egzdsxftpa .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -754,72 +741,72 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
   padding-right: 5px;
 }
 
-#gfahryklcy .gt_left {
+#egzdsxftpa .gt_left {
   text-align: left;
 }
 
-#gfahryklcy .gt_center {
+#egzdsxftpa .gt_center {
   text-align: center;
 }
 
-#gfahryklcy .gt_right {
+#egzdsxftpa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gfahryklcy .gt_font_normal {
+#egzdsxftpa .gt_font_normal {
   font-weight: normal;
 }
 
-#gfahryklcy .gt_font_bold {
+#egzdsxftpa .gt_font_bold {
   font-weight: bold;
 }
 
-#gfahryklcy .gt_font_italic {
+#egzdsxftpa .gt_font_italic {
   font-style: italic;
 }
 
-#gfahryklcy .gt_super {
+#egzdsxftpa .gt_super {
   font-size: 65%;
 }
 
-#gfahryklcy .gt_footnote_marks {
+#egzdsxftpa .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gfahryklcy .gt_asterisk {
+#egzdsxftpa .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gfahryklcy .gt_indent_1 {
+#egzdsxftpa .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gfahryklcy .gt_indent_2 {
+#egzdsxftpa .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gfahryklcy .gt_indent_3 {
+#egzdsxftpa .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gfahryklcy .gt_indent_4 {
+#egzdsxftpa .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gfahryklcy .gt_indent_5 {
+#egzdsxftpa .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gfahryklcy .katex-display {
+#egzdsxftpa .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gfahryklcy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#egzdsxftpa div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1470,410 +1457,392 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
 <span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!DOCTYPE html&gt;</span></span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;html&gt;</span></span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;head&gt;</span></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;title&gt;MathJax TeX Test Page&lt;/title&gt;</span></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;script type="text/javascript" id="MathJax-script" async</span></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="in">  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"&gt;</span></span>
-<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/script&gt;</span></span>
-<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/head&gt;</span></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;body&gt;</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="in">When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are</span></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a><span class="in">$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</span></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/body&gt;</span></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/html&gt;</span></span>
-<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="fu">## BOM là gì:</span></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>Trong quy trình có nhắc đến cụm từ **BOM** nghĩa là **Bill of Material** - là một tài liệu quan trọng trong sản xuất, cung cấp danh sách chi tiết các nguyên liệu, linh kiện và bộ phận cần thiết để sản xuất một sản phẩm cụ thể. Bạn có thể hình dung là để có thể tạo một chiếc bánh thì cần phải có đầy đủ các nguyên vật liệu để làm bánh từ máy xoay bột, lò nướng, bột, trứng,... và phải được chuẩn bị đầy đủ trước khi bắt tay vào làm bánh.</span>
-<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>**BOM** không chỉ liệt kê các thành phần mà còn thường bao gồm thông tin như:</span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Số lượng**: Số lượng của từng thành phần cần thiết.</span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Mã linh kiện**: Mã hoặc số nhận diện của mỗi linh kiện.</span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Đơn vị đo**: Đơn vị tính của từng nguyên liệu (ví dụ: kg, cái, mét).</span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**Cấp độ**: Cấp độ của mỗi thành phần trong cấu trúc sản phẩm, giúp xác định thứ tự lắp ráp.</span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>**Thông tin bổ sung**: Có thể bao gồm thông tin về nhà cung cấp, yêu cầu chất lượng, hoặc hướng dẫn lắp ráp.</span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>Để dễ hình dung, bạn có thể xem bảng dưới đây minh họa về **BOM** của xe hơi.</span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-subcap: "Bảng 1: Ví dụ về BOM cho sản phẩm xe ô tô"</span></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a><span class="co"># Cài đặt và tải gói gt nếu chưa có</span></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("gt")</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a><span class="co"># Tạo dữ liệu cho bảng BOM</span></span>
-<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>bom_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>  Tên_Thành_Phần <span class="ot">=</span> <span class="fu">c</span>(</span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Khung xe"</span>, </span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Động cơ"</span>, </span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống truyền động"</span>, </span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bánh xe"</span>, </span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống phanh"</span>, </span>
-<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống treo"</span>, </span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Nội thất"</span>, </span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống điện"</span>, </span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cửa"</span>, </span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kính chắn gió"</span></span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>  Số_Lượng <span class="ot">=</span> <span class="fu">c</span>(</span>
-<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span>, </span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span>, </span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span>, </span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>    <span class="st">"4"</span>, </span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>    <span class="st">"4"</span>, </span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2 (trước), 2 (sau)"</span>, </span>
-<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1 bộ"</span>, </span>
-<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1 bộ"</span>, </span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>    <span class="st">"4"</span>, </span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span></span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>  Mã_Linh_Kiện <span class="ot">=</span> <span class="fu">c</span>(</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FRAME-001"</span>, </span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ENG-001"</span>, </span>
-<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TRANS-001"</span>, </span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>    <span class="st">"WHEEL-001"</span>, </span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>    <span class="st">"BRAKE-001"</span>, </span>
-<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SUSP-001"</span>, </span>
-<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INTERIOR-001"</span>, </span>
-<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ELECTRICAL-001"</span>, </span>
-<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DOOR-001"</span>, </span>
-<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>    <span class="st">"WINDSHIELD-001"</span></span>
-<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>  Đơn_Vị_Đ<span class="at">o =</span> <span class="fu">c</span>(</span>
-<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
-<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
-<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
-<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
-<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
-<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
-<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bộ"</span>, </span>
-<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bộ"</span>, </span>
-<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
-<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span></span>
-<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span> <span class="co"># Đảm bảo không chuyển đổi thành factors</span></span>
-<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a><span class="co"># Tạo bảng với gt</span></span>
-<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a gt table</span></span>
-<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>bom_data <span class="sc">%&gt;%</span></span>
-<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Bill of Material for vehicle components"</span>,</span>
-<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">md</span>(<span class="st">"List of required materials"</span>)</span>
-<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>    Tên_Thành_Phần <span class="ot">=</span> <span class="st">"Component Name"</span>,</span>
-<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>    Số_Lượng <span class="ot">=</span> <span class="st">"Quantity"</span>,</span>
-<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>    Mã_Linh_Kiện <span class="ot">=</span> <span class="st">"Part Code"</span>,</span>
-<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>    Đơn_Vị_Đ<span class="at">o =</span> <span class="st">"Unit"</span></span>
-<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
-<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">vars</span>(Số_Lượng),</span>
-<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">0</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="fu">## BOM là gì:</span></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>Trong quy trình có nhắc đến cụm từ **BOM** nghĩa là **Bill of Material** - là một tài liệu quan trọng trong sản xuất, cung cấp danh sách chi tiết các nguyên liệu, linh kiện và bộ phận cần thiết để sản xuất một sản phẩm cụ thể. Bạn có thể hình dung là để có thể tạo một chiếc bánh thì cần phải có đầy đủ các nguyên vật liệu để làm bánh từ máy xoay bột, lò nướng, bột, trứng,... và phải được chuẩn bị đầy đủ trước khi bắt tay vào làm bánh.</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>**BOM** không chỉ liệt kê các thành phần mà còn thường bao gồm thông tin như:</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>**Số lượng**: Số lượng của từng thành phần cần thiết.</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>**Mã linh kiện**: Mã hoặc số nhận diện của mỗi linh kiện.</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>**Đơn vị đo**: Đơn vị tính của từng nguyên liệu (ví dụ: kg, cái, mét).</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>**Cấp độ**: Cấp độ của mỗi thành phần trong cấu trúc sản phẩm, giúp xác định thứ tự lắp ráp.</span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>**Thông tin bổ sung**: Có thể bao gồm thông tin về nhà cung cấp, yêu cầu chất lượng, hoặc hướng dẫn lắp ráp.</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>Để dễ hình dung, bạn có thể xem bảng dưới đây minh họa về **BOM** của xe hơi.</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-subcap: "Bảng 1: Ví dụ về BOM cho sản phẩm xe ô tô"</span></span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="co"># Cài đặt và tải gói gt nếu chưa có</span></span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("gt")</span></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtExtras)</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a><span class="co"># Tạo dữ liệu cho bảng BOM</span></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>bom_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>  Tên_Thành_Phần <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Khung xe"</span>, </span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Động cơ"</span>, </span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống truyền động"</span>, </span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bánh xe"</span>, </span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống phanh"</span>, </span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống treo"</span>, </span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Nội thất"</span>, </span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Hệ thống điện"</span>, </span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cửa"</span>, </span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kính chắn gió"</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>  Số_Lượng <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span>, </span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span>, </span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span>, </span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>    <span class="st">"4"</span>, </span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>    <span class="st">"4"</span>, </span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2 (trước), 2 (sau)"</span>, </span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1 bộ"</span>, </span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1 bộ"</span>, </span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a>    <span class="st">"4"</span>, </span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>  Mã_Linh_Kiện <span class="ot">=</span> <span class="fu">c</span>(</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>    <span class="st">"FRAME-001"</span>, </span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ENG-001"</span>, </span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>    <span class="st">"TRANS-001"</span>, </span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>    <span class="st">"WHEEL-001"</span>, </span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>    <span class="st">"BRAKE-001"</span>, </span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>    <span class="st">"SUSP-001"</span>, </span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>    <span class="st">"INTERIOR-001"</span>, </span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ELECTRICAL-001"</span>, </span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>    <span class="st">"DOOR-001"</span>, </span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>    <span class="st">"WINDSHIELD-001"</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>  Đơn_Vị_Đ<span class="at">o =</span> <span class="fu">c</span>(</span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bộ"</span>, </span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>    <span class="st">"bộ"</span>, </span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span>, </span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cái"</span></span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span> <span class="co"># Đảm bảo không chuyển đổi thành factors</span></span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a><span class="co"># Tạo bảng với gt</span></span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a gt table</span></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>bom_data <span class="sc">%&gt;%</span></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Bill of Material for vehicle components"</span>,</span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">md</span>(<span class="st">"List of required materials"</span>)</span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>    Tên_Thành_Phần <span class="ot">=</span> <span class="st">"Component Name"</span>,</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>    Số_Lượng <span class="ot">=</span> <span class="st">"Quantity"</span>,</span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>    Mã_Linh_Kiện <span class="ot">=</span> <span class="st">"Part Code"</span>,</span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>    Đơn_Vị_Đ<span class="at">o =</span> <span class="st">"Unit"</span></span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_number</span>(</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">vars</span>(Số_Lượng),</span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>    <span class="at">decimals =</span> <span class="dv">0</span></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightblue"</span>),</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"black"</span>)</span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="at">groups =</span> <span class="st">"title"</span>)</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightgrey"</span>),</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_column_labels</span>(<span class="fu">everything</span>())</span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"darkblue"</span>),</span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"white"</span>)</span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
 <span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightblue"</span>),</span>
-<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">color =</span> <span class="st">"black"</span>)</span>
-<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="at">groups =</span> <span class="st">"title"</span>)</span>
-<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightgrey"</span>),</span>
-<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_column_labels</span>(<span class="fu">everything</span>())</span>
-<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"darkblue"</span>),</span>
-<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"white"</span>)</span>
-<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> <span class="fu">everything</span>())</span>
-<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add color for each unique value in the "Unit" column</span></span>
-<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightgreen"</span>),</span>
-<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Đơn_Vị_Đo, <span class="at">rows =</span> Đơn_Vị_Đo <span class="sc">==</span> <span class="st">"cái"</span>)</span>
-<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightcoral"</span>),</span>
-<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Đơn_Vị_Đo, <span class="at">rows =</span> Đơn_Vị_Đo <span class="sc">==</span> <span class="st">"bộ"</span>)</span>
-<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.font.size =</span> <span class="dv">14</span>,</span>
-<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">100</span>),</span>
-<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.striping.include_table_body =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.striping.background_color =</span> <span class="st">"lightyellow"</span></span>
-<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(</span>
-<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="st">"Create by package {gt} in R"</span></span>
-<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>()</span>
-<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add color for each unique value in the "Unit" column</span></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightgreen"</span>),</span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Đơn_Vị_Đo, <span class="at">rows =</span> Đơn_Vị_Đo <span class="sc">==</span> <span class="st">"cái"</span>)</span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"lightcoral"</span>),</span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">columns =</span> Đơn_Vị_Đo, <span class="at">rows =</span> Đơn_Vị_Đo <span class="sc">==</span> <span class="st">"bộ"</span>)</span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.font.size =</span> <span class="dv">14</span>,</span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>    <span class="at">table.width =</span> <span class="fu">pct</span>(<span class="dv">100</span>),</span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.striping.include_table_body =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>    <span class="at">row.striping.background_color =</span> <span class="st">"lightyellow"</span></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_source_note</span>(</span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>    <span class="at">source_note =</span> <span class="st">"Create by package {gt} in R"</span></span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt_theme_pff</span>()</span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a>Nhưng thông thường, người ta sẽ trình bày **BOM** dưới dạng hình cây như này, khá giống *Decision tree* - một mô hình *Machine Learning*. Vì dụ ta có quy trình làm bánh pía như sau:</span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>**Bước 1**: Chuẩn bị phần nhân:</span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Đậu xanh: Ngâm đậu xanh qua đêm, sau đó hấp chín và xay nhuyễn.</span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Thịt heo: Nếu sử dụng, xào thịt heo với một chút gia vị cho chín. Trộn đều với đậu xanh đã xay, thêm hạt sen (nếu dùng), mứt (nếu thích) và trộn đều cho đến khi hỗn hợp mịn.</span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Chia nhân thành các phần nhỏ, viên tròn và để nguội. Nếu có trứng muối, bạn có thể đặt vào giữa viên nhân.</span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a>**Bước 2**: Chuẩn bị phần vỏ:</span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Trộn bột mì, đường lại với nhau.</span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Từ từ thêm dầu ăn và nước vào bột, nhào cho đến khi bột mịn và không dính tay.</span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Chia bột thành các phần nhỏ tương ứng với số viên nhân.</span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>**Bước 3**: Tạo hình bánh: - Cán mỏng từng miếng bột ra, sau đó đặt viên nhân vào giữa. - Gói kín lại và vo tròn bánh cho đẹp.</span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a>**Bước 4**: Nướng bánh: - Làm nóng lò ở 180 độ C. - Đặt bánh lên khay nướng có lót giấy nến. - Nướng khoảng 20-25 phút hoặc cho đến khi bánh có màu vàng đẹp.</span>
 <span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a>Nhưng thông thường, người ta sẽ trình bày **BOM** dưới dạng hình cây như này, khá giống *Decision tree* - một mô hình *Machine Learning*. Vì dụ ta có quy trình làm bánh pía như sau:</span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a>**Bước 5**:. Hoàn thiện: - Để bánh nguội trước khi thưởng thức. Bánh pía ngon hơn khi để nguội.</span>
 <span id="cb2-257"><a href="#cb2-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-258"><a href="#cb2-258" aria-hidden="true" tabindex="-1"></a>**Bước 1**: Chuẩn bị phần nhân:</span>
-<span id="cb2-259"><a href="#cb2-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-260"><a href="#cb2-260" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Đậu xanh: Ngâm đậu xanh qua đêm, sau đó hấp chín và xay nhuyễn.</span>
-<span id="cb2-261"><a href="#cb2-261" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Thịt heo: Nếu sử dụng, xào thịt heo với một chút gia vị cho chín. Trộn đều với đậu xanh đã xay, thêm hạt sen (nếu dùng), mứt (nếu thích) và trộn đều cho đến khi hỗn hợp mịn.</span>
-<span id="cb2-262"><a href="#cb2-262" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Chia nhân thành các phần nhỏ, viên tròn và để nguội. Nếu có trứng muối, bạn có thể đặt vào giữa viên nhân.</span>
-<span id="cb2-263"><a href="#cb2-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a>**Bước 2**: Chuẩn bị phần vỏ:</span>
-<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Trộn bột mì, đường lại với nhau.</span>
-<span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Từ từ thêm dầu ăn và nước vào bột, nhào cho đến khi bột mịn và không dính tay.</span>
-<span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Chia bột thành các phần nhỏ tương ứng với số viên nhân.</span>
-<span id="cb2-269"><a href="#cb2-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-270"><a href="#cb2-270" aria-hidden="true" tabindex="-1"></a>**Bước 3**: Tạo hình bánh: - Cán mỏng từng miếng bột ra, sau đó đặt viên nhân vào giữa. - Gói kín lại và vo tròn bánh cho đẹp.</span>
+<span id="cb2-260"><a href="#cb2-260" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-261"><a href="#cb2-261" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb2-262"><a href="#cb2-262" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
+<span id="cb2-263"><a href="#cb2-263" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
+<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a><span class="co"># Install and load the DiagrammeR library</span></span>
+<span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DiagrammeR)</span>
+<span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a><span class="fu">grViz</span>(<span class="st">"</span></span>
+<span id="cb2-269"><a href="#cb2-269" aria-hidden="true" tabindex="-1"></a><span class="st">  digraph {</span></span>
+<span id="cb2-270"><a href="#cb2-270" aria-hidden="true" tabindex="-1"></a><span class="st">    layout = dot</span></span>
 <span id="cb2-271"><a href="#cb2-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-272"><a href="#cb2-272" aria-hidden="true" tabindex="-1"></a>**Bước 4**: Nướng bánh: - Làm nóng lò ở 180 độ C. - Đặt bánh lên khay nướng có lót giấy nến. - Nướng khoảng 20-25 phút hoặc cho đến khi bánh có màu vàng đẹp.</span>
-<span id="cb2-273"><a href="#cb2-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-274"><a href="#cb2-274" aria-hidden="true" tabindex="-1"></a>**Bước 5**:. Hoàn thiện: - Để bánh nguội trước khi thưởng thức. Bánh pía ngon hơn khi để nguội.</span>
-<span id="cb2-275"><a href="#cb2-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-278"><a href="#cb2-278" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-279"><a href="#cb2-279" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb2-280"><a href="#cb2-280" aria-hidden="true" tabindex="-1"></a><span class="co">#| message: false</span></span>
-<span id="cb2-281"><a href="#cb2-281" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb2-282"><a href="#cb2-282" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
-<span id="cb2-283"><a href="#cb2-283" aria-hidden="true" tabindex="-1"></a><span class="co"># Install and load the DiagrammeR library</span></span>
-<span id="cb2-284"><a href="#cb2-284" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DiagrammeR)</span>
-<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-286"><a href="#cb2-286" aria-hidden="true" tabindex="-1"></a><span class="fu">grViz</span>(<span class="st">"</span></span>
-<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a><span class="st">  digraph {</span></span>
-<span id="cb2-288"><a href="#cb2-288" aria-hidden="true" tabindex="-1"></a><span class="st">    layout = dot</span></span>
-<span id="cb2-289"><a href="#cb2-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a><span class="st">    node [shape = box, style=filled, fontname=Helvetica, width=2, color = orange]</span></span>
-<span id="cb2-291"><a href="#cb2-291" aria-hidden="true" tabindex="-1"></a><span class="st">    edge [color = grey, arrowhead = vee]</span></span>
-<span id="cb2-292"><a href="#cb2-292" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-293"><a href="#cb2-293" aria-hidden="true" tabindex="-1"></a><span class="st">    A[label = 'Bánh Pía:</span><span class="sc">\n</span><span class="st">1 cái', color = '#FFD700', fontcolor = black]</span></span>
-<span id="cb2-294"><a href="#cb2-294" aria-hidden="true" tabindex="-1"></a><span class="st">    B[label = 'Hạt sen</span><span class="sc">\n</span><span class="st"> = 20g']</span></span>
-<span id="cb2-295"><a href="#cb2-295" aria-hidden="true" tabindex="-1"></a><span class="st">    C[label = 'Mứt</span><span class="sc">\n</span><span class="st"> = 10g']</span></span>
-<span id="cb2-296"><a href="#cb2-296" aria-hidden="true" tabindex="-1"></a><span class="st">    D[label = 'Lót giấy nến: 1 cái']</span></span>
-<span id="cb2-297"><a href="#cb2-297" aria-hidden="true" tabindex="-1"></a><span class="st">    E[label = 'Phần vỏ:</span><span class="sc">\n</span><span class="st">1 cái']</span></span>
-<span id="cb2-298"><a href="#cb2-298" aria-hidden="true" tabindex="-1"></a><span class="st">    F[label = 'Bột mì</span><span class="sc">\n</span><span class="st">= 150g']</span></span>
-<span id="cb2-299"><a href="#cb2-299" aria-hidden="true" tabindex="-1"></a><span class="st">    G[label = 'Dầu ăn</span><span class="sc">\n</span><span class="st">= 30g']</span></span>
-<span id="cb2-300"><a href="#cb2-300" aria-hidden="true" tabindex="-1"></a><span class="st">    H[label = 'Nước</span><span class="sc">\n</span><span class="st">= 60ml']</span></span>
-<span id="cb2-301"><a href="#cb2-301" aria-hidden="true" tabindex="-1"></a><span class="st">    J[label = 'Phần nhân:</span><span class="sc">\n</span><span class="st">1 cái']</span></span>
-<span id="cb2-302"><a href="#cb2-302" aria-hidden="true" tabindex="-1"></a><span class="st">    K[label = 'Trứng muối</span><span class="sc">\n</span><span class="st">= 1 quả']</span></span>
-<span id="cb2-303"><a href="#cb2-303" aria-hidden="true" tabindex="-1"></a><span class="st">    L[label = 'Thịt heo</span><span class="sc">\n</span><span class="st">= 30g']  </span></span>
-<span id="cb2-304"><a href="#cb2-304" aria-hidden="true" tabindex="-1"></a><span class="st">    Q[label = 'Đậu xanh</span><span class="sc">\n</span><span class="st">= 100g']</span></span>
-<span id="cb2-305"><a href="#cb2-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-306"><a href="#cb2-306" aria-hidden="true" tabindex="-1"></a><span class="st">    Step1[label = 'B1: Chuẩn bị NVL</span><span class="sc">\n</span><span class="st">Time: 15 phút', color = lightblue]</span></span>
-<span id="cb2-307"><a href="#cb2-307" aria-hidden="true" tabindex="-1"></a><span class="st">    Step2[label = 'B2: Làm phần vỏ</span><span class="sc">\n</span><span class="st">Time: 30 phút', color = lightblue]</span></span>
-<span id="cb2-308"><a href="#cb2-308" aria-hidden="true" tabindex="-1"></a><span class="st">    Step3[label = 'B3: Làm phần nhân</span><span class="sc">\n</span><span class="st">Time: 20 phút', color = lightblue]</span></span>
-<span id="cb2-309"><a href="#cb2-309" aria-hidden="true" tabindex="-1"></a><span class="st">    Step4[label = 'B4: Gói bánh</span><span class="sc">\n</span><span class="st">Time: 10 phút', color = lightblue]</span></span>
-<span id="cb2-310"><a href="#cb2-310" aria-hidden="true" tabindex="-1"></a><span class="st">    Step5[label = 'B5: Hấp bánh</span><span class="sc">\n</span><span class="st">Time: 45 phút', color = lightblue]</span></span>
-<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a><span class="st">    A -&gt; B</span></span>
-<span id="cb2-313"><a href="#cb2-313" aria-hidden="true" tabindex="-1"></a><span class="st">    A -&gt; C</span></span>
-<span id="cb2-314"><a href="#cb2-314" aria-hidden="true" tabindex="-1"></a><span class="st">    B -&gt; D</span></span>
-<span id="cb2-315"><a href="#cb2-315" aria-hidden="true" tabindex="-1"></a><span class="st">    C -&gt; D</span></span>
-<span id="cb2-316"><a href="#cb2-316" aria-hidden="true" tabindex="-1"></a><span class="st">    D -&gt; E</span></span>
-<span id="cb2-317"><a href="#cb2-317" aria-hidden="true" tabindex="-1"></a><span class="st">    D -&gt; J</span></span>
-<span id="cb2-318"><a href="#cb2-318" aria-hidden="true" tabindex="-1"></a><span class="st">    E -&gt; F</span></span>
-<span id="cb2-319"><a href="#cb2-319" aria-hidden="true" tabindex="-1"></a><span class="st">    E -&gt; G</span></span>
-<span id="cb2-320"><a href="#cb2-320" aria-hidden="true" tabindex="-1"></a><span class="st">    E -&gt; H</span></span>
-<span id="cb2-321"><a href="#cb2-321" aria-hidden="true" tabindex="-1"></a><span class="st">    J -&gt; K</span></span>
-<span id="cb2-322"><a href="#cb2-322" aria-hidden="true" tabindex="-1"></a><span class="st">    J -&gt; L</span></span>
-<span id="cb2-323"><a href="#cb2-323" aria-hidden="true" tabindex="-1"></a><span class="st">    J -&gt; Q</span></span>
-<span id="cb2-324"><a href="#cb2-324" aria-hidden="true" tabindex="-1"></a><span class="st">  </span></span>
-<span id="cb2-325"><a href="#cb2-325" aria-hidden="true" tabindex="-1"></a><span class="st">  // Kết nối giữa các bước sản xuất với đường nét liền</span></span>
-<span id="cb2-326"><a href="#cb2-326" aria-hidden="true" tabindex="-1"></a><span class="st">    Step5 -&gt; Step4 [style=solid]</span></span>
-<span id="cb2-327"><a href="#cb2-327" aria-hidden="true" tabindex="-1"></a><span class="st">    Step4 -&gt; Step3 [style=solid]</span></span>
-<span id="cb2-328"><a href="#cb2-328" aria-hidden="true" tabindex="-1"></a><span class="st">    Step3 -&gt; Step2 [style=solid]</span></span>
-<span id="cb2-329"><a href="#cb2-329" aria-hidden="true" tabindex="-1"></a><span class="st">    Step2 -&gt; Step1 [style=solid]</span></span>
-<span id="cb2-330"><a href="#cb2-330" aria-hidden="true" tabindex="-1"></a><span class="st">  }</span></span>
-<span id="cb2-331"><a href="#cb2-331" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb2-272"><a href="#cb2-272" aria-hidden="true" tabindex="-1"></a><span class="st">    node [shape = box, style=filled, fontname=Helvetica, width=2, color = orange]</span></span>
+<span id="cb2-273"><a href="#cb2-273" aria-hidden="true" tabindex="-1"></a><span class="st">    edge [color = grey, arrowhead = vee]</span></span>
+<span id="cb2-274"><a href="#cb2-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-275"><a href="#cb2-275" aria-hidden="true" tabindex="-1"></a><span class="st">    A[label = 'Bánh Pía:</span><span class="sc">\n</span><span class="st">1 cái', color = '#FFD700', fontcolor = black]</span></span>
+<span id="cb2-276"><a href="#cb2-276" aria-hidden="true" tabindex="-1"></a><span class="st">    B[label = 'Hạt sen</span><span class="sc">\n</span><span class="st"> = 20g']</span></span>
+<span id="cb2-277"><a href="#cb2-277" aria-hidden="true" tabindex="-1"></a><span class="st">    C[label = 'Mứt</span><span class="sc">\n</span><span class="st"> = 10g']</span></span>
+<span id="cb2-278"><a href="#cb2-278" aria-hidden="true" tabindex="-1"></a><span class="st">    D[label = 'Lót giấy nến: 1 cái']</span></span>
+<span id="cb2-279"><a href="#cb2-279" aria-hidden="true" tabindex="-1"></a><span class="st">    E[label = 'Phần vỏ:</span><span class="sc">\n</span><span class="st">1 cái']</span></span>
+<span id="cb2-280"><a href="#cb2-280" aria-hidden="true" tabindex="-1"></a><span class="st">    F[label = 'Bột mì</span><span class="sc">\n</span><span class="st">= 150g']</span></span>
+<span id="cb2-281"><a href="#cb2-281" aria-hidden="true" tabindex="-1"></a><span class="st">    G[label = 'Dầu ăn</span><span class="sc">\n</span><span class="st">= 30g']</span></span>
+<span id="cb2-282"><a href="#cb2-282" aria-hidden="true" tabindex="-1"></a><span class="st">    H[label = 'Nước</span><span class="sc">\n</span><span class="st">= 60ml']</span></span>
+<span id="cb2-283"><a href="#cb2-283" aria-hidden="true" tabindex="-1"></a><span class="st">    J[label = 'Phần nhân:</span><span class="sc">\n</span><span class="st">1 cái']</span></span>
+<span id="cb2-284"><a href="#cb2-284" aria-hidden="true" tabindex="-1"></a><span class="st">    K[label = 'Trứng muối</span><span class="sc">\n</span><span class="st">= 1 quả']</span></span>
+<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a><span class="st">    L[label = 'Thịt heo</span><span class="sc">\n</span><span class="st">= 30g']  </span></span>
+<span id="cb2-286"><a href="#cb2-286" aria-hidden="true" tabindex="-1"></a><span class="st">    Q[label = 'Đậu xanh</span><span class="sc">\n</span><span class="st">= 100g']</span></span>
+<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-288"><a href="#cb2-288" aria-hidden="true" tabindex="-1"></a><span class="st">    Step1[label = 'B1: Chuẩn bị NVL</span><span class="sc">\n</span><span class="st">Time: 15 phút', color = lightblue]</span></span>
+<span id="cb2-289"><a href="#cb2-289" aria-hidden="true" tabindex="-1"></a><span class="st">    Step2[label = 'B2: Làm phần vỏ</span><span class="sc">\n</span><span class="st">Time: 30 phút', color = lightblue]</span></span>
+<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a><span class="st">    Step3[label = 'B3: Làm phần nhân</span><span class="sc">\n</span><span class="st">Time: 20 phút', color = lightblue]</span></span>
+<span id="cb2-291"><a href="#cb2-291" aria-hidden="true" tabindex="-1"></a><span class="st">    Step4[label = 'B4: Gói bánh</span><span class="sc">\n</span><span class="st">Time: 10 phút', color = lightblue]</span></span>
+<span id="cb2-292"><a href="#cb2-292" aria-hidden="true" tabindex="-1"></a><span class="st">    Step5[label = 'B5: Hấp bánh</span><span class="sc">\n</span><span class="st">Time: 45 phút', color = lightblue]</span></span>
+<span id="cb2-293"><a href="#cb2-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-294"><a href="#cb2-294" aria-hidden="true" tabindex="-1"></a><span class="st">    A -&gt; B</span></span>
+<span id="cb2-295"><a href="#cb2-295" aria-hidden="true" tabindex="-1"></a><span class="st">    A -&gt; C</span></span>
+<span id="cb2-296"><a href="#cb2-296" aria-hidden="true" tabindex="-1"></a><span class="st">    B -&gt; D</span></span>
+<span id="cb2-297"><a href="#cb2-297" aria-hidden="true" tabindex="-1"></a><span class="st">    C -&gt; D</span></span>
+<span id="cb2-298"><a href="#cb2-298" aria-hidden="true" tabindex="-1"></a><span class="st">    D -&gt; E</span></span>
+<span id="cb2-299"><a href="#cb2-299" aria-hidden="true" tabindex="-1"></a><span class="st">    D -&gt; J</span></span>
+<span id="cb2-300"><a href="#cb2-300" aria-hidden="true" tabindex="-1"></a><span class="st">    E -&gt; F</span></span>
+<span id="cb2-301"><a href="#cb2-301" aria-hidden="true" tabindex="-1"></a><span class="st">    E -&gt; G</span></span>
+<span id="cb2-302"><a href="#cb2-302" aria-hidden="true" tabindex="-1"></a><span class="st">    E -&gt; H</span></span>
+<span id="cb2-303"><a href="#cb2-303" aria-hidden="true" tabindex="-1"></a><span class="st">    J -&gt; K</span></span>
+<span id="cb2-304"><a href="#cb2-304" aria-hidden="true" tabindex="-1"></a><span class="st">    J -&gt; L</span></span>
+<span id="cb2-305"><a href="#cb2-305" aria-hidden="true" tabindex="-1"></a><span class="st">    J -&gt; Q</span></span>
+<span id="cb2-306"><a href="#cb2-306" aria-hidden="true" tabindex="-1"></a><span class="st">  </span></span>
+<span id="cb2-307"><a href="#cb2-307" aria-hidden="true" tabindex="-1"></a><span class="st">  // Kết nối giữa các bước sản xuất với đường nét liền</span></span>
+<span id="cb2-308"><a href="#cb2-308" aria-hidden="true" tabindex="-1"></a><span class="st">    Step5 -&gt; Step4 [style=solid]</span></span>
+<span id="cb2-309"><a href="#cb2-309" aria-hidden="true" tabindex="-1"></a><span class="st">    Step4 -&gt; Step3 [style=solid]</span></span>
+<span id="cb2-310"><a href="#cb2-310" aria-hidden="true" tabindex="-1"></a><span class="st">    Step3 -&gt; Step2 [style=solid]</span></span>
+<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a><span class="st">    Step2 -&gt; Step1 [style=solid]</span></span>
+<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a><span class="st">  }</span></span>
+<span id="cb2-313"><a href="#cb2-313" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb2-314"><a href="#cb2-314" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-315"><a href="#cb2-315" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-316"><a href="#cb2-316" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-317"><a href="#cb2-317" aria-hidden="true" tabindex="-1"></a><span class="al">![Hình 4: BOM diagram of Banh Pia](img/BOM.png)</span>{width = 80%} </span>
+<span id="cb2-318"><a href="#cb2-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-319"><a href="#cb2-319" aria-hidden="true" tabindex="-1"></a>**Mục tiêu:** *giúp quản lý quy trình sản xuất hiệu quả hơn, đảm bảo rằng tất cả các nguyên liệu cần thiết đều có sẵn và đúng thời điểm, đồng thời giảm thiểu rủi ro về việc thiếu hụt nguyên liệu.*</span>
+<span id="cb2-320"><a href="#cb2-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-321"><a href="#cb2-321" aria-hidden="true" tabindex="-1"></a>Như vậy, **BOM** có thể được xem là thành phần quan trọng nhất trong kế hoạch **MRP**.</span>
+<span id="cb2-322"><a href="#cb2-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-323"><a href="#cb2-323" aria-hidden="true" tabindex="-1"></a><span class="fu">## Khó khăn trong thực tế:</span></span>
+<span id="cb2-324"><a href="#cb2-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-325"><a href="#cb2-325" aria-hidden="true" tabindex="-1"></a>Về lý thuyết xây dựng kế hoạch **MRP** không khó, bạn chỉ cần số liệu thực tế của kho, 1 bảng **BOM** như trên và dự đoán nhu cầu của khách hàng là sẽ tính toán được số lượng cần thiết nhưng thực tế bao giờ cũng khác xa với lý thuyết.</span>
+<span id="cb2-326"><a href="#cb2-326" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-327"><a href="#cb2-327" aria-hidden="true" tabindex="-1"></a>Theo nghiên cứu của<span class="co">[</span><span class="ot">@baskaran42018</span><span class="co">]</span>, tác giả đề cập đến các vấn đề thường gặp đối với **MRP**:</span>
+<span id="cb2-328"><a href="#cb2-328" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-329"><a href="#cb2-329" aria-hidden="true" tabindex="-1"></a><span class="al">![Hình 5: Các vấn đề thường gặp khi dùng MRP](img/commonproblem.png)</span>{fig-align="center"}</span>
+<span id="cb2-330"><a href="#cb2-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-331"><a href="#cb2-331" aria-hidden="true" tabindex="-1"></a>Nếu bạn lười đọc, mình sẽ tóm tắt lại:</span>
 <span id="cb2-332"><a href="#cb2-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-333"><a href="#cb2-333" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-333"><a href="#cb2-333" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Hệ thống **MRP** đòi hỏi dữ liệu đầu vào chính xác và cụ thể thì mới đưa ra kết quả ít sai lệch với thực tế.</span>
 <span id="cb2-334"><a href="#cb2-334" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-335"><a href="#cb2-335" aria-hidden="true" tabindex="-1"></a><span class="al">![Hình 4: BOM diagram of Banh Pia](img/BOM.png)</span>{width = 80%} </span>
+<span id="cb2-335"><a href="#cb2-335" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**MRP** gặp khó khăn khi đối mặt với sự thay đổi đột ngột về tồn kho, nguyên nhân có thể là do xuất hiện **uncertainty demand** hoặc thiếu các bảng **BOM**. Điều này làm cho việc lên kế hoạch trước không đạt hiệu quả cao.</span>
 <span id="cb2-336"><a href="#cb2-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-337"><a href="#cb2-337" aria-hidden="true" tabindex="-1"></a>**Mục tiêu:** *giúp quản lý quy trình sản xuất hiệu quả hơn, đảm bảo rằng tất cả các nguyên liệu cần thiết đều có sẵn và đúng thời điểm, đồng thời giảm thiểu rủi ro về việc thiếu hụt nguyên liệu.*</span>
+<span id="cb2-337"><a href="#cb2-337" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Khi có sự thay đổi ở cấp trên, **MRP** sẽ phải tính toán lại toàn bộ nên điều này rất tốn thời gian và nguồn lực.</span>
 <span id="cb2-338"><a href="#cb2-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-339"><a href="#cb2-339" aria-hidden="true" tabindex="-1"></a>Như vậy, **BOM** có thể được xem là thành phần quan trọng nhất trong kế hoạch **MRP**.</span>
+<span id="cb2-339"><a href="#cb2-339" aria-hidden="true" tabindex="-1"></a>Tuy vậy, việc ứng dụng **MRP** vẫn rỗng rãi vì nó thích hợp với mọi kiểu công ty, doanh nghiệp.</span>
 <span id="cb2-340"><a href="#cb2-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## Khó khăn trong thực tế:</span></span>
+<span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a><span class="fu">## Công thức tính:</span></span>
 <span id="cb2-342"><a href="#cb2-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a>Về lý thuyết xây dựng kế hoạch **MRP** không khó, bạn chỉ cần số liệu thực tế của kho, 1 bảng **BOM** như trên và dự đoán nhu cầu của khách hàng là sẽ tính toán được số lượng cần thiết nhưng thực tế bao giờ cũng khác xa với lý thuyết.</span>
+<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a>Vậy để xây dựng kế hoạch **MRP**, ta cần tính toán các tham số dưới đây:</span>
 <span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a>Theo nghiên cứu của<span class="co">[</span><span class="ot">@baskaran42018</span><span class="co">]</span>, tác giả đề cập đến các vấn đề thường gặp đối với **MRP**:</span>
-<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a><span class="al">![Hình 5: Các vấn đề thường gặp khi dùng MRP](img/commonproblem.png)</span>{fig-align="center"}</span>
-<span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a>Nếu bạn lười đọc, mình sẽ tóm tắt lại:</span>
-<span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Hệ thống **MRP** đòi hỏi dữ liệu đầu vào chính xác và cụ thể thì mới đưa ra kết quả ít sai lệch với thực tế.</span>
-<span id="cb2-352"><a href="#cb2-352" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**MRP** gặp khó khăn khi đối mặt với sự thay đổi đột ngột về tồn kho, nguyên nhân có thể là do xuất hiện **uncertainty demand** hoặc thiếu các bảng **BOM**. Điều này làm cho việc lên kế hoạch trước không đạt hiệu quả cao.</span>
-<span id="cb2-354"><a href="#cb2-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Khi có sự thay đổi ở cấp trên, **MRP** sẽ phải tính toán lại toàn bộ nên điều này rất tốn thời gian và nguồn lực.</span>
+<span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
+<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!DOCTYPE html&gt;</span></span>
+<span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;html lang="en"&gt;</span></span>
+<span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;head&gt;</span></span>
+<span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;meta charset="UTF-8"&gt;</span></span>
+<span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></span>
+<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;title&gt;How to Calculate the MRP&lt;/title&gt;</span></span>
+<span id="cb2-352"><a href="#cb2-352" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"&gt;&lt;/script&gt;</span></span>
+<span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;script type="text/javascript"&gt;</span></span>
+<span id="cb2-354"><a href="#cb2-354" aria-hidden="true" tabindex="-1"></a><span class="in">        google.charts.load('current', { packages: ['orgchart'] });</span></span>
+<span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a><span class="in">        google.charts.setOnLoadCallback(drawChart);</span></span>
 <span id="cb2-356"><a href="#cb2-356" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a>Tuy vậy, việc ứng dụng **MRP** vẫn rỗng rãi vì nó thích hợp với mọi kiểu công ty, doanh nghiệp.</span>
-<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a><span class="fu">## Công thức tính:</span></span>
-<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a>Vậy để xây dựng kế hoạch **MRP**, ta cần tính toán các tham số dưới đây:</span>
-<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a><span class="in">```{=html}</span></span>
-<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;!DOCTYPE html&gt;</span></span>
-<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;html lang="en"&gt;</span></span>
-<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;head&gt;</span></span>
-<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;meta charset="UTF-8"&gt;</span></span>
-<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></span>
-<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;title&gt;How to Calculate the MRP&lt;/title&gt;</span></span>
-<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"&gt;&lt;/script&gt;</span></span>
-<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;script type="text/javascript"&gt;</span></span>
-<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a><span class="in">        google.charts.load('current', { packages: ['orgchart'] });</span></span>
-<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a><span class="in">        google.charts.setOnLoadCallback(drawChart);</span></span>
-<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a><span class="in">        function drawChart() {</span></span>
-<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a><span class="in">            var data = new google.visualization.DataTable();</span></span>
-<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addColumn('string', 'Task');</span></span>
-<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addColumn('string', 'Parent');</span></span>
-<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addColumn('string', 'ToolTip');</span></span>
-<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addRows([</span></span>
-<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a><span class="in">                [{ v: 'MRP', f: 'Build MRP Plan' }, '', 'Final Calculation'],</span></span>
-<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Gross Requirement', 'MRP', 'Step 2: Calculate Gross Requirement'],</span></span>
-<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Safety Stock', 'MRP', 'Step 1: Determine Safety Stock'],</span></span>
-<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Demand Forecast', 'Safety Stock', 'Predictive Demand'],</span></span>
-<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Lead Time', 'Safety Stock', 'Time to Procure'],</span></span>
-<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a><span class="in">                ['BOM (Bill of Material)', 'Gross Requirement', 'Material Breakdown'],</span></span>
-<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Scheduled Receipts', 'Gross Requirement', 'Expected Inventory'],</span></span>
-<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a><span class="in">                ['On-Hand Inventory', 'Gross Requirement', 'Current Stock']</span></span>
-<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a><span class="in">            ]);</span></span>
-<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a><span class="in">            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));</span></span>
-<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a><span class="in">            chart.draw(data, {</span></span>
-<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a><span class="in">                allowHtml: true,</span></span>
-<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a><span class="in">                nodes: {</span></span>
-<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a><span class="in">                    'MRP': { 'color': '#1E90FF' },</span></span>
-<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Gross Requirement': { 'color': '#FF4500' },</span></span>
-<span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Safety Stock': { 'color': '#32CD32' },</span></span>
-<span id="cb2-398"><a href="#cb2-398" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Demand Forecast': { 'color': '#FFD700' },</span></span>
-<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Lead Time': { 'color': '#FF69B4' },</span></span>
-<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a><span class="in">                    'BOM (Bill of Material)': { 'color': '#6A5ACD' },</span></span>
-<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Scheduled Receipts': { 'color': '#00FA9A' },</span></span>
-<span id="cb2-402"><a href="#cb2-402" aria-hidden="true" tabindex="-1"></a><span class="in">                    'On-Hand Inventory': { 'color': '#FFB6C1' }</span></span>
-<span id="cb2-403"><a href="#cb2-403" aria-hidden="true" tabindex="-1"></a><span class="in">                },</span></span>
-<span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a><span class="in">                'size': 'medium',</span></span>
-<span id="cb2-405"><a href="#cb2-405" aria-hidden="true" tabindex="-1"></a><span class="in">                'allowCollapse': true</span></span>
-<span id="cb2-406"><a href="#cb2-406" aria-hidden="true" tabindex="-1"></a><span class="in">            });</span></span>
-<span id="cb2-407"><a href="#cb2-407" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
-<span id="cb2-408"><a href="#cb2-408" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/script&gt;</span></span>
-<span id="cb2-409"><a href="#cb2-409" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;style&gt;</span></span>
-<span id="cb2-410"><a href="#cb2-410" aria-hidden="true" tabindex="-1"></a><span class="in">        body {</span></span>
-<span id="cb2-411"><a href="#cb2-411" aria-hidden="true" tabindex="-1"></a><span class="in">            display: flex;</span></span>
-<span id="cb2-412"><a href="#cb2-412" aria-hidden="true" tabindex="-1"></a><span class="in">            align-items: left;</span></span>
-<span id="cb2-413"><a href="#cb2-413" aria-hidden="true" tabindex="-1"></a><span class="in">            justify-content: left;</span></span>
-<span id="cb2-414"><a href="#cb2-414" aria-hidden="true" tabindex="-1"></a><span class="in">            flex-direction: column;</span></span>
-<span id="cb2-415"><a href="#cb2-415" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
-<span id="cb2-416"><a href="#cb2-416" aria-hidden="true" tabindex="-1"></a><span class="in">        #chart_div {</span></span>
-<span id="cb2-417"><a href="#cb2-417" aria-hidden="true" tabindex="-1"></a><span class="in">            width: 80%;</span></span>
-<span id="cb2-418"><a href="#cb2-418" aria-hidden="true" tabindex="-1"></a><span class="in">            margin: 20px 0;</span></span>
-<span id="cb2-419"><a href="#cb2-419" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
-<span id="cb2-420"><a href="#cb2-420" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/style&gt;</span></span>
-<span id="cb2-421"><a href="#cb2-421" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/head&gt;</span></span>
-<span id="cb2-422"><a href="#cb2-422" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;body&gt;</span></span>
-<span id="cb2-423"><a href="#cb2-423" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-424"><a href="#cb2-424" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;h1&gt;How to Calculate the MRP&lt;/h1&gt;</span></span>
-<span id="cb2-425"><a href="#cb2-425" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-426"><a href="#cb2-426" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div id="chart_div"&gt;&lt;/div&gt;</span></span>
-<span id="cb2-427"><a href="#cb2-427" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-428"><a href="#cb2-428" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/body&gt;</span></span>
-<span id="cb2-429"><a href="#cb2-429" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/html&gt;</span></span>
-<span id="cb2-430"><a href="#cb2-430" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-431"><a href="#cb2-431" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-432"><a href="#cb2-432" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">"text/javascript"</span><span class="kw">&gt;</span></span>
-<span id="cb2-433"><a href="#cb2-433" aria-hidden="true" tabindex="-1"></a>    google<span class="op">.</span><span class="at">charts</span><span class="op">.</span><span class="fu">load</span>(<span class="st">'current'</span><span class="op">,</span> { <span class="dt">packages</span><span class="op">:</span> [<span class="st">'orgchart'</span>] })<span class="op">;</span></span>
-<span id="cb2-434"><a href="#cb2-434" aria-hidden="true" tabindex="-1"></a>    google<span class="op">.</span><span class="at">charts</span><span class="op">.</span><span class="fu">setOnLoadCallback</span>(drawChart)<span class="op">;</span></span>
-<span id="cb2-435"><a href="#cb2-435" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-436"><a href="#cb2-436" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">drawChart</span>() {</span>
-<span id="cb2-437"><a href="#cb2-437" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> data <span class="op">=</span> <span class="kw">new</span> google<span class="op">.</span><span class="at">visualization</span><span class="op">.</span><span class="fu">DataTable</span>()<span class="op">;</span></span>
-<span id="cb2-438"><a href="#cb2-438" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addColumn</span>(<span class="st">'string'</span><span class="op">,</span> <span class="st">'Task'</span>)<span class="op">;</span></span>
-<span id="cb2-439"><a href="#cb2-439" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addColumn</span>(<span class="st">'string'</span><span class="op">,</span> <span class="st">'Parent'</span>)<span class="op">;</span></span>
-<span id="cb2-440"><a href="#cb2-440" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addColumn</span>(<span class="st">'string'</span><span class="op">,</span> <span class="st">'ToolTip'</span>)<span class="op">;</span></span>
-<span id="cb2-441"><a href="#cb2-441" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addRows</span>([</span>
-<span id="cb2-442"><a href="#cb2-442" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'MRP'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#build-mrp"&gt;Build MRP Plan&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">''</span><span class="op">,</span> <span class="st">'Final Calculation'</span>]<span class="op">,</span></span>
-<span id="cb2-443"><a href="#cb2-443" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#gross-requirement"&gt;Gross Requirement&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'MRP'</span><span class="op">,</span> <span class="st">'Step 2: Calculate Gross Requirement'</span>]<span class="op">,</span></span>
-<span id="cb2-444"><a href="#cb2-444" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Safety Stock'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#safety-stock"&gt;Safety Stock&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'MRP'</span><span class="op">,</span> <span class="st">'Step 1: Determine Safety Stock'</span>]<span class="op">,</span></span>
-<span id="cb2-445"><a href="#cb2-445" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Demand Forecast'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#predicted-demand"&gt;Demand Forecast&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Safety Stock'</span><span class="op">,</span> <span class="st">'Predictive Demand'</span>]<span class="op">,</span></span>
-<span id="cb2-446"><a href="#cb2-446" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Lead Time'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#determine-lead-time"&gt;Lead Time&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Safety Stock'</span><span class="op">,</span> <span class="st">'Time to Procure'</span>]<span class="op">,</span></span>
-<span id="cb2-447"><a href="#cb2-447" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'BOM (Bill of Material)'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#bom"&gt;BOM (Bill of Material)&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="st">'Material Breakdown'</span>]<span class="op">,</span></span>
-<span id="cb2-448"><a href="#cb2-448" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Scheduled Receipts'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#scheduled-receipts"&gt;Scheduled Receipts&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="st">'Expected Inventory'</span>]<span class="op">,</span></span>
-<span id="cb2-449"><a href="#cb2-449" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'On-Hand Inventory'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#on-hand-inventory"&gt;On-Hand Inventory&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="st">'Current Stock'</span>]</span>
-<span id="cb2-450"><a href="#cb2-450" aria-hidden="true" tabindex="-1"></a>        ])<span class="op">;</span></span>
-<span id="cb2-451"><a href="#cb2-451" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-452"><a href="#cb2-452" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> chart <span class="op">=</span> <span class="kw">new</span> google<span class="op">.</span><span class="at">visualization</span><span class="op">.</span><span class="fu">OrgChart</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'chart_div'</span>))<span class="op">;</span></span>
-<span id="cb2-453"><a href="#cb2-453" aria-hidden="true" tabindex="-1"></a>        chart<span class="op">.</span><span class="fu">draw</span>(data<span class="op">,</span> {</span>
-<span id="cb2-454"><a href="#cb2-454" aria-hidden="true" tabindex="-1"></a>            <span class="dt">allowHtml</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb2-455"><a href="#cb2-455" aria-hidden="true" tabindex="-1"></a>            <span class="dt">nodes</span><span class="op">:</span> {</span>
-<span id="cb2-456"><a href="#cb2-456" aria-hidden="true" tabindex="-1"></a>                <span class="st">'MRP'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#1E90FF'</span> }<span class="op">,</span></span>
-<span id="cb2-457"><a href="#cb2-457" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Gross Requirement'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FF4500'</span> }<span class="op">,</span></span>
-<span id="cb2-458"><a href="#cb2-458" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Safety Stock'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#32CD32'</span> }<span class="op">,</span></span>
-<span id="cb2-459"><a href="#cb2-459" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Demand Forecast'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FFD700'</span> }<span class="op">,</span></span>
-<span id="cb2-460"><a href="#cb2-460" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Lead Time'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FF69B4'</span> }<span class="op">,</span></span>
-<span id="cb2-461"><a href="#cb2-461" aria-hidden="true" tabindex="-1"></a>                <span class="st">'BOM (Bill of Material)'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#6A5ACD'</span> }<span class="op">,</span></span>
-<span id="cb2-462"><a href="#cb2-462" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Scheduled Receipts'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#00FA9A'</span> }<span class="op">,</span></span>
-<span id="cb2-463"><a href="#cb2-463" aria-hidden="true" tabindex="-1"></a>                <span class="st">'On-Hand Inventory'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FFB6C1'</span> }</span>
-<span id="cb2-464"><a href="#cb2-464" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb2-465"><a href="#cb2-465" aria-hidden="true" tabindex="-1"></a>            <span class="st">'size'</span><span class="op">:</span> <span class="st">'medium'</span><span class="op">,</span></span>
-<span id="cb2-466"><a href="#cb2-466" aria-hidden="true" tabindex="-1"></a>            <span class="st">'allowCollapse'</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb2-467"><a href="#cb2-467" aria-hidden="true" tabindex="-1"></a>        })<span class="op">;</span></span>
-<span id="cb2-468"><a href="#cb2-468" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb2-469"><a href="#cb2-469" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span>
+<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a><span class="in">        function drawChart() {</span></span>
+<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a><span class="in">            var data = new google.visualization.DataTable();</span></span>
+<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addColumn('string', 'Task');</span></span>
+<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addColumn('string', 'Parent');</span></span>
+<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addColumn('string', 'ToolTip');</span></span>
+<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a><span class="in">            data.addRows([</span></span>
+<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a><span class="in">                [{ v: 'MRP', f: 'Build MRP Plan' }, '', 'Final Calculation'],</span></span>
+<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Gross Requirement', 'MRP', 'Step 2: Calculate Gross Requirement'],</span></span>
+<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Safety Stock', 'MRP', 'Step 1: Determine Safety Stock'],</span></span>
+<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Demand Forecast', 'Safety Stock', 'Predictive Demand'],</span></span>
+<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Lead Time', 'Safety Stock', 'Time to Procure'],</span></span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a><span class="in">                ['BOM (Bill of Material)', 'Gross Requirement', 'Material Breakdown'],</span></span>
+<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a><span class="in">                ['Scheduled Receipts', 'Gross Requirement', 'Expected Inventory'],</span></span>
+<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a><span class="in">                ['On-Hand Inventory', 'Gross Requirement', 'Current Stock']</span></span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a><span class="in">            ]);</span></span>
+<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a><span class="in">            var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));</span></span>
+<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a><span class="in">            chart.draw(data, {</span></span>
+<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a><span class="in">                allowHtml: true,</span></span>
+<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a><span class="in">                nodes: {</span></span>
+<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a><span class="in">                    'MRP': { 'color': '#1E90FF' },</span></span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Gross Requirement': { 'color': '#FF4500' },</span></span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Safety Stock': { 'color': '#32CD32' },</span></span>
+<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Demand Forecast': { 'color': '#FFD700' },</span></span>
+<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Lead Time': { 'color': '#FF69B4' },</span></span>
+<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a><span class="in">                    'BOM (Bill of Material)': { 'color': '#6A5ACD' },</span></span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a><span class="in">                    'Scheduled Receipts': { 'color': '#00FA9A' },</span></span>
+<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a><span class="in">                    'On-Hand Inventory': { 'color': '#FFB6C1' }</span></span>
+<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a><span class="in">                },</span></span>
+<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a><span class="in">                'size': 'medium',</span></span>
+<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a><span class="in">                'allowCollapse': true</span></span>
+<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a><span class="in">            });</span></span>
+<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
+<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/script&gt;</span></span>
+<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;style&gt;</span></span>
+<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a><span class="in">        body {</span></span>
+<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a><span class="in">            display: flex;</span></span>
+<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a><span class="in">            align-items: left;</span></span>
+<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a><span class="in">            justify-content: left;</span></span>
+<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a><span class="in">            flex-direction: column;</span></span>
+<span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
+<span id="cb2-398"><a href="#cb2-398" aria-hidden="true" tabindex="-1"></a><span class="in">        #chart_div {</span></span>
+<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a><span class="in">            width: 80%;</span></span>
+<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a><span class="in">            margin: 20px 0;</span></span>
+<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a><span class="in">        }</span></span>
+<span id="cb2-402"><a href="#cb2-402" aria-hidden="true" tabindex="-1"></a><span class="in">    &lt;/style&gt;</span></span>
+<span id="cb2-403"><a href="#cb2-403" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/head&gt;</span></span>
+<span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;body&gt;</span></span>
+<span id="cb2-405"><a href="#cb2-405" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-406"><a href="#cb2-406" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;h1&gt;How to Calculate the MRP&lt;/h1&gt;</span></span>
+<span id="cb2-407"><a href="#cb2-407" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-408"><a href="#cb2-408" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;div id="chart_div"&gt;&lt;/div&gt;</span></span>
+<span id="cb2-409"><a href="#cb2-409" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-410"><a href="#cb2-410" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/body&gt;</span></span>
+<span id="cb2-411"><a href="#cb2-411" aria-hidden="true" tabindex="-1"></a><span class="in">&lt;/html&gt;</span></span>
+<span id="cb2-412"><a href="#cb2-412" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-413"><a href="#cb2-413" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-414"><a href="#cb2-414" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">"text/javascript"</span><span class="kw">&gt;</span></span>
+<span id="cb2-415"><a href="#cb2-415" aria-hidden="true" tabindex="-1"></a>    google<span class="op">.</span><span class="at">charts</span><span class="op">.</span><span class="fu">load</span>(<span class="st">'current'</span><span class="op">,</span> { <span class="dt">packages</span><span class="op">:</span> [<span class="st">'orgchart'</span>] })<span class="op">;</span></span>
+<span id="cb2-416"><a href="#cb2-416" aria-hidden="true" tabindex="-1"></a>    google<span class="op">.</span><span class="at">charts</span><span class="op">.</span><span class="fu">setOnLoadCallback</span>(drawChart)<span class="op">;</span></span>
+<span id="cb2-417"><a href="#cb2-417" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-418"><a href="#cb2-418" aria-hidden="true" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">drawChart</span>() {</span>
+<span id="cb2-419"><a href="#cb2-419" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> data <span class="op">=</span> <span class="kw">new</span> google<span class="op">.</span><span class="at">visualization</span><span class="op">.</span><span class="fu">DataTable</span>()<span class="op">;</span></span>
+<span id="cb2-420"><a href="#cb2-420" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addColumn</span>(<span class="st">'string'</span><span class="op">,</span> <span class="st">'Task'</span>)<span class="op">;</span></span>
+<span id="cb2-421"><a href="#cb2-421" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addColumn</span>(<span class="st">'string'</span><span class="op">,</span> <span class="st">'Parent'</span>)<span class="op">;</span></span>
+<span id="cb2-422"><a href="#cb2-422" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addColumn</span>(<span class="st">'string'</span><span class="op">,</span> <span class="st">'ToolTip'</span>)<span class="op">;</span></span>
+<span id="cb2-423"><a href="#cb2-423" aria-hidden="true" tabindex="-1"></a>        data<span class="op">.</span><span class="fu">addRows</span>([</span>
+<span id="cb2-424"><a href="#cb2-424" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'MRP'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#build-mrp"&gt;Build MRP Plan&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">''</span><span class="op">,</span> <span class="st">'Final Calculation'</span>]<span class="op">,</span></span>
+<span id="cb2-425"><a href="#cb2-425" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#gross-requirement"&gt;Gross Requirement&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'MRP'</span><span class="op">,</span> <span class="st">'Step 2: Calculate Gross Requirement'</span>]<span class="op">,</span></span>
+<span id="cb2-426"><a href="#cb2-426" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Safety Stock'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#safety-stock"&gt;Safety Stock&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'MRP'</span><span class="op">,</span> <span class="st">'Step 1: Determine Safety Stock'</span>]<span class="op">,</span></span>
+<span id="cb2-427"><a href="#cb2-427" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Demand Forecast'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#predicted-demand"&gt;Demand Forecast&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Safety Stock'</span><span class="op">,</span> <span class="st">'Predictive Demand'</span>]<span class="op">,</span></span>
+<span id="cb2-428"><a href="#cb2-428" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Lead Time'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#determine-lead-time"&gt;Lead Time&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Safety Stock'</span><span class="op">,</span> <span class="st">'Time to Procure'</span>]<span class="op">,</span></span>
+<span id="cb2-429"><a href="#cb2-429" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'BOM (Bill of Material)'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#bom"&gt;BOM (Bill of Material)&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="st">'Material Breakdown'</span>]<span class="op">,</span></span>
+<span id="cb2-430"><a href="#cb2-430" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'Scheduled Receipts'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#scheduled-receipts"&gt;Scheduled Receipts&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="st">'Expected Inventory'</span>]<span class="op">,</span></span>
+<span id="cb2-431"><a href="#cb2-431" aria-hidden="true" tabindex="-1"></a>            [{ <span class="dt">v</span><span class="op">:</span> <span class="st">'On-Hand Inventory'</span><span class="op">,</span> <span class="dt">f</span><span class="op">:</span> <span class="st">'&lt;a href="#on-hand-inventory"&gt;On-Hand Inventory&lt;/a&gt;'</span> }<span class="op">,</span> <span class="st">'Gross Requirement'</span><span class="op">,</span> <span class="st">'Current Stock'</span>]</span>
+<span id="cb2-432"><a href="#cb2-432" aria-hidden="true" tabindex="-1"></a>        ])<span class="op">;</span></span>
+<span id="cb2-433"><a href="#cb2-433" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-434"><a href="#cb2-434" aria-hidden="true" tabindex="-1"></a>        <span class="kw">var</span> chart <span class="op">=</span> <span class="kw">new</span> google<span class="op">.</span><span class="at">visualization</span><span class="op">.</span><span class="fu">OrgChart</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'chart_div'</span>))<span class="op">;</span></span>
+<span id="cb2-435"><a href="#cb2-435" aria-hidden="true" tabindex="-1"></a>        chart<span class="op">.</span><span class="fu">draw</span>(data<span class="op">,</span> {</span>
+<span id="cb2-436"><a href="#cb2-436" aria-hidden="true" tabindex="-1"></a>            <span class="dt">allowHtml</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-437"><a href="#cb2-437" aria-hidden="true" tabindex="-1"></a>            <span class="dt">nodes</span><span class="op">:</span> {</span>
+<span id="cb2-438"><a href="#cb2-438" aria-hidden="true" tabindex="-1"></a>                <span class="st">'MRP'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#1E90FF'</span> }<span class="op">,</span></span>
+<span id="cb2-439"><a href="#cb2-439" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Gross Requirement'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FF4500'</span> }<span class="op">,</span></span>
+<span id="cb2-440"><a href="#cb2-440" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Safety Stock'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#32CD32'</span> }<span class="op">,</span></span>
+<span id="cb2-441"><a href="#cb2-441" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Demand Forecast'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FFD700'</span> }<span class="op">,</span></span>
+<span id="cb2-442"><a href="#cb2-442" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Lead Time'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FF69B4'</span> }<span class="op">,</span></span>
+<span id="cb2-443"><a href="#cb2-443" aria-hidden="true" tabindex="-1"></a>                <span class="st">'BOM (Bill of Material)'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#6A5ACD'</span> }<span class="op">,</span></span>
+<span id="cb2-444"><a href="#cb2-444" aria-hidden="true" tabindex="-1"></a>                <span class="st">'Scheduled Receipts'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#00FA9A'</span> }<span class="op">,</span></span>
+<span id="cb2-445"><a href="#cb2-445" aria-hidden="true" tabindex="-1"></a>                <span class="st">'On-Hand Inventory'</span><span class="op">:</span> { <span class="st">'color'</span><span class="op">:</span> <span class="st">'#FFB6C1'</span> }</span>
+<span id="cb2-446"><a href="#cb2-446" aria-hidden="true" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb2-447"><a href="#cb2-447" aria-hidden="true" tabindex="-1"></a>            <span class="st">'size'</span><span class="op">:</span> <span class="st">'medium'</span><span class="op">,</span></span>
+<span id="cb2-448"><a href="#cb2-448" aria-hidden="true" tabindex="-1"></a>            <span class="st">'allowCollapse'</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb2-449"><a href="#cb2-449" aria-hidden="true" tabindex="-1"></a>        })<span class="op">;</span></span>
+<span id="cb2-450"><a href="#cb2-450" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-451"><a href="#cb2-451" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span>
+<span id="cb2-452"><a href="#cb2-452" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-453"><a href="#cb2-453" aria-hidden="true" tabindex="-1"></a><span class="fu">### Predicted demand {#predicted-demand}</span></span>
+<span id="cb2-454"><a href="#cb2-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-455"><a href="#cb2-455" aria-hidden="true" tabindex="-1"></a>Đầu tiên, vẫn là dự đoán nhu cầu của khách hàng trong tương lai. Tùy vào kế hoạch bạn xây dựng, có thể là 1 tháng, 3 tháng hoặc 6 tháng ... mà chọn. Như đã đề cập ở trên, đây là dữ liệu quan trọng làm đầu vào cho **MRP** và cũng là cơ sở để xác định *Safety stock*. </span>
+<span id="cb2-456"><a href="#cb2-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-457"><a href="#cb2-457" aria-hidden="true" tabindex="-1"></a><span class="fu">### Gross requirement {#gross-requirement}</span></span>
+<span id="cb2-458"><a href="#cb2-458" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-459"><a href="#cb2-459" aria-hidden="true" tabindex="-1"></a>Về định nghĩa, *Gross requirement* là tổng nhu cầu cho một vật liệu hoặc linh kiện cụ thể trong một khoảng thời gian nhất định, mà không xem xét bất kỳ tồn kho có sẵn hay các khoản thu nhập đã lên lịch.</span>
+<span id="cb2-460"><a href="#cb2-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-461"><a href="#cb2-461" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-462"><a href="#cb2-462" aria-hidden="true" tabindex="-1"></a>\text{Gross Requirement} = \text{Total Demand} \times \text{Component Quantity per product}</span>
+<span id="cb2-463"><a href="#cb2-463" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-464"><a href="#cb2-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-465"><a href="#cb2-465" aria-hidden="true" tabindex="-1"></a><span class="fu">### Scheduled Receipts {#scheduled-receipts}</span></span>
+<span id="cb2-466"><a href="#cb2-466" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-467"><a href="#cb2-467" aria-hidden="true" tabindex="-1"></a>*Scheduled Receipts* là thuật ngữ dùng để chỉ các đơn hàng hoặc lô hàng đã được đặt và dự kiến sẽ được nhận trong một khoảng thời gian nhất định. Ví dụ bạn đang làm kế hoạch nhập vật liệu **A** cho tháng 9 thì trước đó bạn đã đặt hàng vật liệu **A** là 1000 cái thì *scheduled receipts* sẽ bằng 1000. Do đó giả sử đơn giản là bạn đang đơn hàng 2000 cái thì bạn chỉ cần đặt hàng 1000 cái nữa vào tháng 9.</span>
+<span id="cb2-468"><a href="#cb2-468" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-469"><a href="#cb2-469" aria-hidden="true" tabindex="-1"></a>Dữ liệu để tính toán sẽ thường lấy từ các *Purchase Orders* từ phòng thu mua hoặc *Orders* từ các nhà phân phối.</span>
 <span id="cb2-470"><a href="#cb2-470" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-471"><a href="#cb2-471" aria-hidden="true" tabindex="-1"></a><span class="fu">### Predicted demand {#predicted-demand}</span></span>
+<span id="cb2-471"><a href="#cb2-471" aria-hidden="true" tabindex="-1"></a><span class="fu">### On-Hand Inventory {#on-hand-inventory}</span></span>
 <span id="cb2-472"><a href="#cb2-472" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-473"><a href="#cb2-473" aria-hidden="true" tabindex="-1"></a>Đầu tiên, vẫn là dự đoán nhu cầu của khách hàng trong tương lai. Tùy vào kế hoạch bạn xây dựng, có thể là 1 tháng, 3 tháng hoặc 6 tháng ... mà chọn. Như đã đề cập ở trên, đây là dữ liệu quan trọng làm đầu vào cho **MRP** và cũng là cơ sở để xác định *Safety stock*. </span>
+<span id="cb2-473"><a href="#cb2-473" aria-hidden="true" tabindex="-1"></a>*On-hand inventory* nghĩa là lượng hàng hóa còn tồn đọng trong kho, cửa hàng của bạn tại một thời điểm nào đó. Dữ liệu này dễ dàng lấy được từ các báo cáo theo ngày, theo tuần ở các cửa hàng, kho.</span>
 <span id="cb2-474"><a href="#cb2-474" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-475"><a href="#cb2-475" aria-hidden="true" tabindex="-1"></a><span class="fu">### Gross requirement {#gross-requirement}</span></span>
-<span id="cb2-476"><a href="#cb2-476" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-477"><a href="#cb2-477" aria-hidden="true" tabindex="-1"></a>Về định nghĩa, *Gross requirement* là tổng nhu cầu cho một vật liệu hoặc linh kiện cụ thể trong một khoảng thời gian nhất định, mà không xem xét bất kỳ tồn kho có sẵn hay các khoản thu nhập đã lên lịch.</span>
+<span id="cb2-475"><a href="#cb2-475" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-476"><a href="#cb2-476" aria-hidden="true" tabindex="-1"></a>\text{On-Hand Inventory} = \text{Tồn kho đầu kỳ} + \text{Nhập kho} - \text{Xuất kho}</span>
+<span id="cb2-477"><a href="#cb2-477" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb2-478"><a href="#cb2-478" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-479"><a href="#cb2-479" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-480"><a href="#cb2-480" aria-hidden="true" tabindex="-1"></a>\text{Gross Requirement} = \text{Total Demand} \times \text{Component Quantity per product}</span>
-<span id="cb2-481"><a href="#cb2-481" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-479"><a href="#cb2-479" aria-hidden="true" tabindex="-1"></a><span class="fu">### Net Requirements:</span></span>
+<span id="cb2-480"><a href="#cb2-480" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-481"><a href="#cb2-481" aria-hidden="true" tabindex="-1"></a>*Net requirement* nghĩa là lượng hàng hóa còn thiếu để thỏa mãn hết tất cả nhu cầu trong tương lai mà mình đã dự đoán. Công thức tính cũng đơn giản như dưới đây. </span>
 <span id="cb2-482"><a href="#cb2-482" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-483"><a href="#cb2-483" aria-hidden="true" tabindex="-1"></a><span class="fu">### Scheduled Receipts {#scheduled-receipts}</span></span>
-<span id="cb2-484"><a href="#cb2-484" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-485"><a href="#cb2-485" aria-hidden="true" tabindex="-1"></a>*Scheduled Receipts* là thuật ngữ dùng để chỉ các đơn hàng hoặc lô hàng đã được đặt và dự kiến sẽ được nhận trong một khoảng thời gian nhất định. Ví dụ bạn đang làm kế hoạch nhập vật liệu **A** cho tháng 9 thì trước đó bạn đã đặt hàng vật liệu **A** là 1000 cái thì *scheduled receipts* sẽ bằng 1000. Do đó giả sử đơn giản là bạn đang đơn hàng 2000 cái thì bạn chỉ cần đặt hàng 1000 cái nữa vào tháng 9.</span>
+<span id="cb2-483"><a href="#cb2-483" aria-hidden="true" tabindex="-1"></a>$$</span>
+<span id="cb2-484"><a href="#cb2-484" aria-hidden="true" tabindex="-1"></a>\text{Net Requirement} = \text{Gross Requirement}−\text{Scheduled Receipts}−\text{On-Hand Inventory}</span>
+<span id="cb2-485"><a href="#cb2-485" aria-hidden="true" tabindex="-1"></a>$$</span>
 <span id="cb2-486"><a href="#cb2-486" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-487"><a href="#cb2-487" aria-hidden="true" tabindex="-1"></a>Dữ liệu để tính toán sẽ thường lấy từ các *Purchase Orders* từ phòng thu mua hoặc *Orders* từ các nhà phân phối.</span>
+<span id="cb2-487"><a href="#cb2-487" aria-hidden="true" tabindex="-1"></a>Giả sử, bạn dự đoán tháng sau có 1000 đơn hàng, bạn đã có 200 *On-hand inventory* và 300 *Scheduled receipt* vậy thì bạn chỉ cần đặt thêm nguyên vật liệu để sản xuất đủ 500 đơn hàng nữa là xong. Đó cũng chính là số lượng cần xác định trong kế hoạch **MRP**.</span>
 <span id="cb2-488"><a href="#cb2-488" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-489"><a href="#cb2-489" aria-hidden="true" tabindex="-1"></a><span class="fu">### On-Hand Inventory {#on-hand-inventory}</span></span>
-<span id="cb2-490"><a href="#cb2-490" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-491"><a href="#cb2-491" aria-hidden="true" tabindex="-1"></a>*On-hand inventory* nghĩa là lượng hàng hóa còn tồn đọng trong kho, cửa hàng của bạn tại một thời điểm nào đó. Dữ liệu này dễ dàng lấy được từ các báo cáo theo ngày, theo tuần ở các cửa hàng, kho.</span>
-<span id="cb2-492"><a href="#cb2-492" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-493"><a href="#cb2-493" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-494"><a href="#cb2-494" aria-hidden="true" tabindex="-1"></a>\text{On-Hand Inventory} = \text{Tồn kho đầu kỳ} + \text{Nhập kho} - \text{Xuất kho}</span>
-<span id="cb2-495"><a href="#cb2-495" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-496"><a href="#cb2-496" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-497"><a href="#cb2-497" aria-hidden="true" tabindex="-1"></a><span class="fu">### Net Requirements:</span></span>
-<span id="cb2-498"><a href="#cb2-498" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-499"><a href="#cb2-499" aria-hidden="true" tabindex="-1"></a>*Net requirement* nghĩa là lượng hàng hóa còn thiếu để thỏa mãn hết tất cả nhu cầu trong tương lai mà mình đã dự đoán. Công thức tính cũng đơn giản như dưới đây. </span>
-<span id="cb2-500"><a href="#cb2-500" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-501"><a href="#cb2-501" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-502"><a href="#cb2-502" aria-hidden="true" tabindex="-1"></a>\text{Net Requirement} = \text{Gross Requirement}−\text{Scheduled Receipts}−\text{On-Hand Inventory}</span>
-<span id="cb2-503"><a href="#cb2-503" aria-hidden="true" tabindex="-1"></a>$$</span>
-<span id="cb2-504"><a href="#cb2-504" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-505"><a href="#cb2-505" aria-hidden="true" tabindex="-1"></a>Giả sử, bạn dự đoán tháng sau có 1000 đơn hàng, bạn đã có 200 *On-hand inventory* và 300 *Scheduled receipt* vậy thì bạn chỉ cần đặt thêm nguyên vật liệu để sản xuất đủ 500 đơn hàng nữa là xong. Đó cũng chính là số lượng cần xác định trong kế hoạch **MRP**.</span>
-<span id="cb2-506"><a href="#cb2-506" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-507"><a href="#cb2-507" aria-hidden="true" tabindex="-1"></a>Tiếp theo ta sẽ tìm hiểu thêm về khái niệm *Safety stock* và *reorder point* ở trang <span class="co">[</span><span class="ot">Thời gian xây dựng MRP</span><span class="co">](Time.qmd)</span></span>
+<span id="cb2-489"><a href="#cb2-489" aria-hidden="true" tabindex="-1"></a>Tiếp theo ta sẽ tìm hiểu thêm về khái niệm *Safety stock* và *reorder point* ở trang <span class="co">[</span><span class="ot">Thời gian xây dựng MRP</span><span class="co">](Time.qmd)</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
