@@ -535,7 +535,7 @@ reactable(
 
 
 
-Để so sánh sự quan trọng của *safety leadtime*, mình sẽ sử dụng *line chart* để đánh giá mức độ dịch vụ của nhà kho dựa trên tiêu chí *high service*: càng ít *outstock* thì càng tốt. Qua biểu đồ dưới đây, ta cũng dễ dàng thấy là việc đặt hàng trước 1 ngày hàng tồn kho nhỏ hơn *safety stock* giảm tình trạng *outstock* đáng kể (từ 16 lần xuống còn 6 lần trong tháng).
+Để so sánh sự quan trọng của *safety leadtime*, mình sẽ sử dụng *line chart* để đánh giá mức độ dịch vụ của nhà kho dựa trên tiêu chí *high service*: càng ít *outstock* thì càng tốt. Qua biểu đồ dưới đây, ta cũng dễ dàng thấy là việc đặt hàng **trước 1 ngày** hàng tồn kho nhỏ hơn *safety stock* giảm tình trạng *outstock* đáng kể (từ **16** lần xuống còn **6** lần trong tháng).
 
 ```{r}
 #| warning: false
@@ -549,6 +549,12 @@ inv_start_ts <- xts(result$Inv_start,
 inv_start_safety_ts <- xts(result$Inv_start_safety,
                            order.by = result$Date)
 
+event<-result %>% 
+  filter(ROP == 1) %>% 
+  select(Date) %>% 
+  mutate(Date = as.Date(Date)) %>% 
+  pull()
+
 # Create line plot:
 library(dygraphs)
 combine <- cbind(demand_ts,
@@ -559,7 +565,13 @@ dygraph(combine) %>%
   dySeries("demand_ts", label = "Demand") %>%
   dySeries("inv_start_ts", label = "Starting inv") %>% 
   dySeries("inv_start_safety_ts", label = "Starting safety inv") %>% 
-  dyOptions(fillGraph = TRUE, fillAlpha = 0.4)
+  dyOptions(fillGraph = TRUE, fillAlpha = 0.4) %>% 
+  dyEvent(event[1], "ROP", labelLoc = "bottom") %>%
+  dyEvent(event[2], "ROP", labelLoc = "bottom") %>%
+  dyEvent(event[3], "ROP", labelLoc = "bottom") %>%
+  dyEvent(event[4], "ROP", labelLoc = "bottom") %>%
+  dyEvent(event[5], "ROP", labelLoc = "bottom") %>%
+  dyEvent(event[6], "ROP", labelLoc = "bottom")
 ```
 
 Tuy nhiên nếu xét về tiêu chí tối ưu chi phí - *saving cost* thì ta cần tính toán thêm chi phí của việc *outstock* và chi phí tồn kho - *inventory cost*.
