@@ -1,0 +1,46 @@
+<!-- HTML for filter panel -->
+<div>
+  <label for="categorySelect">Select Category:</label>
+  <select id="categorySelect">
+    <option value="All">All</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+  </select>
+
+  <label for="valueRange">Value Range:</label>
+  <input type="number" id="minValue" placeholder="Min" />
+  <input type="number" id="maxValue" placeholder="Max" />
+  
+  <button onclick="updateChart()">Apply Filter</button>
+</div>
+
+<img id="plot" src="initial_plot.png" alt="Initial Plot" />
+<div id="filteredData"></div>
+
+<script>
+  function updateChart() {
+    const category = document.getElementById('categorySelect').value;
+    const minValue = parseFloat(document.getElementById('minValue').value);
+    const maxValue = parseFloat(document.getElementById('maxValue').value);
+    
+    // Filter logic (static for this example)
+    const data = [
+      { category: 'A', value: Math.random() * 10 },
+      { category: 'B', value: Math.random() * 10 },
+      { category: 'C', value: Math.random() * 10 }
+    ]; // Replace with your actual data logic
+
+    const filteredData = data.filter(d => 
+      (category === 'All' || d.category === category) &&
+      (isNaN(minValue) || d.value >= minValue) &&
+      (isNaN(maxValue) || d.value <= maxValue)
+    );
+
+    // Display filtered data (for demonstration)
+    document.getElementById('filteredData').innerHTML = JSON.stringify(filteredData);
+    
+    // Update the chart image or render a new chart using your logic
+    // Here you can create a new plot image or dynamically draw it using a library
+  }
+</script>

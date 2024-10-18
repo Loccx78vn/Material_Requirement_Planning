@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Cao Xuân Lộc"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: Introduce.qmd
+        text: Introduction
+      - href: Time.qmd
+        text: Time to set MRP
+      - href: MRP.qmd
+        text: Practice in R
+  page-footer:
+    right: "Built with [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2024, Loc cao"
+
+format:
+  html:
+    theme: 
+      light: flatly
+    toc: true
+  
