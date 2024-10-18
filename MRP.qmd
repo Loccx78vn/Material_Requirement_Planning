@@ -466,9 +466,71 @@ Như trong trường hợp này, nhà kho *B* bị outstock tới tận 16 lận
 ```{r}
 #| echo: false
 result <- read_excel("my_data.xlsx")
-library(DT)
-datatable(result %>% 
-            mutate(Date = as.Date(Date)))
+
+compare<-result %>% 
+            mutate(Date = as.Date(Date),
+                   Fulfill = ifelse(Inv_start/Demand < 1,round(Inv_start/Demand,3)*100,100),
+                   Fulfill_safety = ifelse(Inv_start_safety/Demand < 1, round(Inv_start_safety/Demand,3)*100,100)) %>% 
+  select (c(Date,
+            Demand,
+            Fulfill,
+            Fulfill_safety,
+            Stockout,
+            Stock_out_safety)) 
+                   
+                   
+reactable(
+  compare,
+  columns = list(
+    Fulfill = colDef(
+      name = "Normal fulfill",
+      align = "center",
+      cell = function(value) {
+        # Format the value and append the '%' sign
+        formatted_value <- paste0(format(value, nsmall = 1), "%")
+        color <- ifelse(value <= 0, "#e00000", "#008000")
+        htmltools::tags$span(formatted_value, style = paste("color:", color, "; font-weight: bold;"))
+      }
+    ),
+    Fulfill_safety = colDef(
+      name = "Safety fulfill",
+      align = "center",
+      cell = function(value) {
+        # Format the value and append the '%' sign
+        formatted_value <- paste0(format(value, nsmall = 1), "%")
+        color <- ifelse(value <= 0, "#e00000", "#008000")
+        htmltools::tags$span(formatted_value, style = paste("color:", color, "; font-weight: bold;"))
+      }
+    ),
+    Stock_out_safety = colDef(
+      name = "Safety Stockout",
+      align = "center",
+      cell = function(value) {
+        if (value == "0") {
+          htmltools::tags$span("✔️", style = "color: green; font-size: 18px;")  # Checkmark
+        } else {
+          htmltools::tags$span("❌", style = "color: gray; font-size: 18px;")  # Cross
+        }
+      }
+    ),
+    Stockout = colDef(
+      align = "center",
+      cell = function(value) {
+        if (value == "0") {
+          htmltools::tags$span("✔️", style = "color: green; font-size: 18px;")  # Checkmark
+        } else {
+          htmltools::tags$span("❌", style = "color: gray; font-size: 18px;")  # Cross
+        }
+      }
+    )
+  ),
+  defaultPageSize = 5,
+  highlight = TRUE,
+  striped = TRUE,
+  bordered = TRUE,
+  resizable = TRUE,
+  fullWidth = TRUE
+)
 ```
 
 
