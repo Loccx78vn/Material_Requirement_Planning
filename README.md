@@ -20,4 +20,4 @@ Step 3: Calculate safety stock using statistical functions.
 Step 4: Build an ROP function to automate reorder point calculation.
 Step 5: Integrate MRP logic using BOM and lead time data.
 
-[](img/poster)
+![](img/poster)
