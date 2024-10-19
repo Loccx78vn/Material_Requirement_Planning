@@ -66,10 +66,11 @@ cell_style <- function(value) {
 # Create a reactable table with conditional formatting and gray headers
 reactable(
   lead_time_data,
-  searchable = TRUE,
   highlight = TRUE,
   striped = TRUE,
-  defaultPageSize = 10,
+  defaultPageSize = 5,
+  resizable = TRUE,
+  fullWidth = TRUE,
   columns = list(
     Business_Model = colDef(name = "Model", headerStyle = list(background = "#6c757d", color = "white")),
     Production_Lead_Time = colDef(

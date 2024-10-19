@@ -385,21 +385,38 @@ result<-f("WHB",600,3,500)
 
 Kết quả giả lập được trình bày như sau, trong đó:
 
-- *Starting inv*: là tồn kho đầu ngày (hoặc đầu kì cho tháng/năm). Lượng hàng đầu ngày sẽ bằng lượng hàng cuối ngày hôm trước.
-- *Ending inv*: là tồn kho cuối ngày, được tính bằng hiệu số của lượng hàng đầu ngày và nhu cầu của khách hàng.
-- *Reorder*: thời điểm bắt đầu đặt hàng mới.
-- *Stock out*: được gán bằng 1 khi lượng hàng đầu ngày nhỏ hơn nhu cầu của khách hàng. 
+- **Starting inv**: là tồn kho đầu ngày (hoặc đầu kì cho tháng/năm). Lượng hàng đầu ngày sẽ bằng lượng hàng cuối ngày hôm trước.
+- **Ending inv**: là tồn kho cuối ngày, được tính bằng hiệu số của lượng hàng đầu ngày và nhu cầu của khách hàng.
+- **Status**: ám chỉ trạng thái của nhà kho, ở đây có 3 dạng trạng thái: *Oke* là khi nhà kho không bị *outstock* và không cần đặt thêm hàng, *Reorder* khi đặt đơn hàng và *Outstock* khi lượng hàng tồn kho không đủ để phục vụ nhu cầu của khách hàng vào ngày đó.
+- *Supply*: lượng hàng sẽ nhận từ đơn đặt hàng.
 
 ```{r}
 #| warning: false
 #| message: false
 library(reactable)
+library(reactablefmtr)
 library(htmltools)
+
+# create a function status.PI.Index
+status_PI.Index <- function(color = "#aaa", width = "0.55rem", height = width) {
+  span(style = list(
+    display = "inline-block",
+    marginRight = "0.5rem",
+    width = width,
+    height = height,
+    backgroundColor = color,
+    borderRadius = "50%"
+  ))
+}
 # Reactable:
-reactable(result %>% 
+table<-result %>% 
             mutate(Date = as.Date(Date),
-                   ROP = ifelse(ROP == 1, "Reorder","Nothing"),
-                   Stockout = ifelse(Stockout == 1,"Bad","Good")),
+                   Status = ifelse(ROP == 0 & Stockout == 0, "Oke",
+                                   ifelse(ROP == 1  & Stockout == 0, "Reorder","Overstock")),
+                   Supply = ROP*600) %>% 
+                     select(-c(ROP,Stockout))
+
+reactable(table,
   columns = list(
     Date = colDef(name = "Date", 
                    sortable = TRUE, 
@@ -407,7 +424,11 @@ reactable(result %>%
                    headerStyle = list(background = "#b0b0b0")),  
     Demand = colDef(name = "Demand", 
                     align = "center", 
-                    headerStyle = list(background = "#b0b0b0")),  
+                    headerStyle = list(background = "#b0b0b0"),
+                    cell = data_bars(table, 
+                               fill_color = "#3fc1c5",
+                               text_position = "outside-end")
+            ),  
     Inv_start = colDef(name = "Starting Inv", 
                        align = "center", 
                        headerStyle = list(background = "#b0b0b0"),
@@ -415,6 +436,13 @@ reactable(result %>%
                          color <- ifelse(value <= 0, "#e00000", "#008000")  
                          list(color = color, fontWeight = "bold")
                        }),
+    Supply = colDef(name = "Supply (units)",
+                    align = "center",
+                    headerStyle = list(background = "#b0b0b0"),
+                    cell = data_bars(table, 
+                               fill_color = "#3CB371",
+                               text_position = "outside-end")
+            ),
     Inv_end = colDef(name = "Ending Inv", 
                      align = "center", 
                      headerStyle = list(background = "#b0b0b0"),
@@ -422,33 +450,19 @@ reactable(result %>%
                        color <- ifelse(value <= 0, "#e00000", "#008000")  
                        list(color = color, fontWeight = "bold")
                      }),
-    ROP = colDef(name = "Reorder point", 
-                      align = "center",
-                      headerStyle = list(background = "#b0b0b0"),
-                  filterable = TRUE,
-      filterMethod = JS("function(rows, columnId, filterValue) {
-        return rows.filter(function(row) {
-          return row.values[columnId].indexOf(filterValue) !== -1
-        })
-      }"),
-                      cell = function(value) {
-                        style <- ifelse(value == "Reorder", 
-                                        "background-color: green; color: white;",
-                                        "background-color: grey; color: white;")  
-                        htmltools::tags$div(value, style = style)
-                      }),
-    Stockout = colDef(name = "Stockout", 
-                  align = "center",
-                  headerStyle = list(background = "#b0b0b0"),  
-                  cell = function(value) {
-                    if (value == "Good") {
-                      htmltools::tags$span("✔️", style = "color: green; font-size: 18px;")  # Checkmark
-                    } else {
-                      htmltools::tags$span("❌", style = "color: gray; font-size: 18px;")  # Cross
-                    }
-                  })
-    
-  ),
+    Status = colDef(
+              name = "Status",
+              align = "center", 
+                     headerStyle = list(background = "#b0b0b0"),
+              cell = function(value) {
+                color <- switch(value,
+                                Overstock = "hsl(3, 69%, 50%)",
+                                Oke = "hsl(154, 64%, 50%)",
+                                Reorder = "hsl(214, 45%, 50%)")
+                Status <- status_PI.Index(color = color)
+                tagList(Status, value)
+              }
+            )),
   defaultPageSize = 10,
   highlight = TRUE,
   striped = TRUE,
