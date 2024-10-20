@@ -13,9 +13,11 @@ format:
   html:
     code-fold: true
     code-tools: true
+    theme: 
+    - theme.scss 
 ---
 
-# Giới thiệu:
+## Giới thiệu:
 
 Hôm nay chúng ta sẽ học về một hoạt động quan trọng trong các hoạt động quản lí chuỗi cung ứng - **Material Requirement Planning**.
 
@@ -29,9 +31,9 @@ Bạn có thể thấy quy trình làm việc phức tạp phải không ? Nhưn
 
 Vì vậy, để xử lí công việc này, các nhà chuyên gia đã đề xuất ra công cụ **Material Requirement Planning** và cũng là *keyword* mà chúng ta sẽ tìm hiểu và thực hành ở R trong bài viết này.
 
-# Material requirement planning:
+## Material requirement planning:
 
-## Định nghĩa:
+### Định nghĩa:
 
 Về định nghĩa, theo [@davidessex] ,**MRP** có thể hiểu là kế hoạch yêu cầu vật liệu và là hệ thống tính toán các vật liệu và linh kiện cần thiết cho sản xuất. Nó bao gồm ba bước: kiểm kê hiện có, xác định vật liệu cần thêm, và lập kế hoạch sản xuất hoặc mua sắm.
 
@@ -39,13 +41,13 @@ Về định nghĩa, theo [@davidessex] ,**MRP** có thể hiểu là kế hoạ
 
 Như hình trên là ứng dụng **Fishbowl** - được thành lập vào năm 2001 bởi David Williams và một nhóm các nhà phát triển phần mềm tại Utah, Hoa Kỳ. Mục tiêu ban đầu của công ty là tạo ra một giải pháp phần mềm giúp các doanh nghiệp nhỏ và vừa quản lý kho và quy trình sản xuất một cách hiệu quả hơn.
 
-## Lý do sử dụng:
+### Lý do sử dụng:
 
 **MRP** quan trọng vì giúp đảm bảo có đủ tồn kho đúng thời điểm với chi phí thấp nhất, cải thiện hiệu quả, linh hoạt và lợi nhuận của sản xuất. Nó nâng cao năng suất lao động, chất lượng sản phẩm và giảm chi phí. **MRP** cũng giúp các nhà sản xuất nhanh chóng đáp ứng nhu cầu thị trường và tránh tình trạng thiếu hàng, góp phần vào sự tăng trưởng doanh thu.
 
 Thông thường, **MRP** sẽ kết hợp như một tính năng trong phần mềm **WMS - Warehouse Management Software** vì việc lên kế hoạch vật tư cần dựa vào thông tin đầu vào là hàng hóa, nguyên vật liệu tồn kho còn lại bao nhiêu để tính toán đúng số lượng vừa đủ để đặt hàng, tránh việc dư thừa, tồn kho.
 
-# Cách xây dựng MRP:
+## Cách xây dựng MRP:
 
 Vậy làm sao để xây dựng một kế hoạch **MRP** thật tốt. Về cách tổng quát, ta sẽ có sơ đồ như dưới đây:
 
@@ -95,7 +97,7 @@ digraph flowchart {
 ")
 ```
 
-## BOM là gì:
+### BOM là gì:
 
 Trong quy trình có nhắc đến cụm từ **BOM** nghĩa là **Bill of Material** - là một tài liệu quan trọng trong sản xuất, cung cấp danh sách chi tiết các nguyên liệu, linh kiện và bộ phận cần thiết để sản xuất một sản phẩm cụ thể. Bạn có thể hình dung là để có thể tạo một chiếc bánh thì cần phải có đầy đủ các nguyên vật liệu để làm bánh từ máy xoay bột, lò nướng, bột, trứng,... và phải được chuẩn bị đầy đủ trước khi bắt tay vào làm bánh.
 
@@ -314,7 +316,7 @@ grViz("
 
 Như vậy, **BOM** có thể được xem là thành phần quan trọng nhất trong kế hoạch **MRP**.
 
-## Khó khăn trong thực tế:
+### Khó khăn trong thực tế:
 
 Về lý thuyết xây dựng kế hoạch **MRP** không khó, bạn chỉ cần số liệu thực tế của kho, 1 bảng **BOM** như trên và dự đoán nhu cầu của khách hàng là sẽ tính toán được số lượng cần thiết nhưng thực tế bao giờ cũng khác xa với lý thuyết.
 
@@ -332,7 +334,7 @@ Nếu bạn lười đọc, mình sẽ tóm tắt lại:
 
 Tuy vậy, việc ứng dụng **MRP** vẫn rỗng rãi vì nó thích hợp với mọi kiểu công ty, doanh nghiệp.
 
-## Công thức tính:
+### Công thức tính:
 
 Vậy để xây dựng kế hoạch **MRP**, ta cần tính toán các tham số dưới đây:
 
@@ -444,11 +446,11 @@ Vậy để xây dựng kế hoạch **MRP**, ta cần tính toán các tham s�
     }
 </script>
 
-### Predicted demand {#predicted-demand}
+#### Predicted demand {#predicted-demand}
 
 Đầu tiên, vẫn là dự đoán nhu cầu của khách hàng trong tương lai. Tùy vào kế hoạch bạn xây dựng, có thể là 1 tháng, 3 tháng hoặc 6 tháng ... mà chọn. Như đã đề cập ở trên, đây là dữ liệu quan trọng làm đầu vào cho **MRP** và cũng là cơ sở để xác định *Safety stock*. 
 
-### Gross requirement {#gross-requirement}
+#### Gross requirement {#gross-requirement}
 
 Về định nghĩa, *Gross requirement* là tổng nhu cầu cho một vật liệu hoặc linh kiện cụ thể trong một khoảng thời gian nhất định, mà không xem xét bất kỳ tồn kho có sẵn hay các khoản thu nhập đã lên lịch.
 
@@ -456,13 +458,13 @@ $$
 \text{Gross Requirement} = \text{Total Demand} \times \text{Component Quantity per product}
 $$
 
-### Scheduled Receipts {#scheduled-receipts}
+#### Scheduled Receipts {#scheduled-receipts}
 
 *Scheduled Receipts* là thuật ngữ dùng để chỉ các đơn hàng hoặc lô hàng đã được đặt và dự kiến sẽ được nhận trong một khoảng thời gian nhất định. Ví dụ bạn đang làm kế hoạch nhập vật liệu **A** cho tháng 9 thì trước đó bạn đã đặt hàng vật liệu **A** là 1000 cái thì *scheduled receipts* sẽ bằng 1000. Do đó giả sử đơn giản là bạn đang đơn hàng 2000 cái thì bạn chỉ cần đặt hàng 1000 cái nữa vào tháng 9.
 
 Dữ liệu để tính toán sẽ thường lấy từ các *Purchase Orders* từ phòng thu mua hoặc *Orders* từ các nhà phân phối.
 
-### On-Hand Inventory {#on-hand-inventory}
+#### On-Hand Inventory {#on-hand-inventory}
 
 *On-hand inventory* nghĩa là lượng hàng hóa còn tồn đọng trong kho, cửa hàng của bạn tại một thời điểm nào đó. Dữ liệu này dễ dàng lấy được từ các báo cáo theo ngày, theo tuần ở các cửa hàng, kho.
 
@@ -470,7 +472,7 @@ $$
 \text{On-Hand Inventory} = \text{Tồn kho đầu kỳ} + \text{Nhập kho} - \text{Xuất kho}
 $$
 
-### Net Requirements:
+#### Net Requirements:
 
 *Net requirement* nghĩa là lượng hàng hóa còn thiếu để thỏa mãn hết tất cả nhu cầu trong tương lai mà mình đã dự đoán. Công thức tính cũng đơn giản như dưới đây. 
 

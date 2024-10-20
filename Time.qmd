@@ -12,17 +12,19 @@ format:
   html:
     code-fold: true
     code-tools: true
+    theme: 
+    - theme.scss
 ---
 
-# Khi nào xây dựng MRP?:
+## Khi nào xây dựng MRP?:
 
 Sau khi bạn học về **MRP**, bạn sẽ cảm thấy rằng việc tính toán và xây dựng kế hoạch **MRP** chỉ là vấn đề về thời gian, hoàn toàn dễ tính toán (vì chỉ có cộng trừ nhân chia). Vậy câu hỏi quan trọng nhất chính là "*Khi nào bạn cần xây dựng kế hoạch và bắt đầu đặt hàng từ nhà cung ứng ?*".
 
 Việc xác định **khi nào** đòi hỏi 2 yếu tố: *thời điểm* và *điều kiện kích hoạt*. *Thời điểm* đơn giản chính là thời gian chính xác để xây dựng **MRP** và gửi đơn đặt hàng. *Điều kiện kích hoạt* nghĩa các tiêu chí cần đạt để chấp nhập yêu cầu cần xây dựng **MRP** và dựa vào đó để chọn *thời điểm* phù hợp. Và để xác định chúng, ta cần tính toán 2 nhân tố là: **Leadtime** và **Reorder point**.
 
-## Lead time:
+### Lead time:
 
-### Phương pháp tính:
+#### Phương pháp tính:
 
 Về *Leadtime* sẽ có nhiều cách tính toán và điều này tùy thuộc vào nhà cung ứng của bạn thuộc mô hình doanh nghiệp gì hoặc hợp đồng giữa công ty bạn và nhà cung ứng. Ví dụ bạn làm việc với nhà cung cấp thì thông thường họ sẽ lo luôn hoạt động vận tải và bốc xếp dỡ hàng lên xuống vào kho của bạn và bạn chỉ cần thanh toán các khoảng phí đó. Nhưng nếu bạn tự thuê xe riêng đế tới kho của họ bốc hàng, bạn cần tính toán thêm về chi phí và thời gian vận tải - *Transportation time* và thời gian bốc xếp - *Unloading/Loading time*.
 
@@ -143,7 +145,7 @@ reactable(
 
 Việc xác định *leadtime* quan trọng vì nó là tham số để tính *safety stock* như công thức dưới đây. Đây là công thức tổng quan nhất về *Safety stock* nhưng có nhiều nghiên cứu gần đây cũng đưa ra các công thức khác để nâng cao hiệu quả trong quản lí chuỗi cung ứng.
 
-### Safety leadtime là gì?:
+#### Safety leadtime là gì?:
 
 Ngoài ra, còn có khái niệm về *Safety leadtime* được [@remahariharanandpaulzipkin] định nghĩa là: "*the difference between the release time and the due date minus the supply lead time of the product, where supply lead time is defined as the time that is required to produce the order*", được hiểu đơn giản là thời điểm nhằm đảm bảo quá trình được diễn ra suôn sẻ.
 
@@ -151,11 +153,9 @@ Ngoài ra, còn có khái niệm về *Safety leadtime* được [@remahariharan
 
 ![Hình 7: Mô tả về Safety Leadtime](img/safetyleadtime.png)
 
-## Safety Stock:
+### Safety Stock:
 
 Trước khi nói về *reorder point*, mình sẽ giải thích sơ về *safety stock* cho những bạn nào chưa hiểu về khái niệm này.
-
-### Định nghĩa:
 
 *Safety stock* hay còn gọi là tồn kho an toàn được định nghĩa là một lượng hàng hóa dự trữ thêm nhằm đảm bảo rằng doanh nghiệp có thể đáp ứng nhu cầu của khách hàng ngay cả khi có sự biến động trong nhu cầu hoặc thời gian giao hàng. Công thức tính là:
 
@@ -171,7 +171,7 @@ Như hình mô tả bên trên từ [@edouardthieuleux2022], bạn sẽ thấy r
 
 -   Mục đích của điểm đặt hàng là nhằm đảm bảo sẽ cung cấp đủ hàng trong 1 khoảng thời gian cụ thể trong tương lai. Khi lượng hàng chạm đến một lượng cụ thể thì bạn cần phải lên các yêu cầu đặt hàng, mua hàng từ các nhà cung ứng.
 
-## Reorder point:
+### Reorder point:
 
 Về *reorder point* được định nghĩa là điểm đặt hàng lại trong quản lý tồn kho, giúp xác định thời điểm cần đặt hàng thêm hàng hóa để tránh tình trạng hết hàng. ROP được tính dựa trên nhu cầu tiêu thụ hàng hóa trong một khoảng thời gian nhất định và thời gian giao hàng từ nhà cung cấp.
 

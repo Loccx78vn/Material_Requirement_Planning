@@ -1,0 +1,52 @@
+/*-- scss:defaults --*/
+// Base document colors
+
+$body-bg: white;
+$link-color: #2ba2f9;
+
+/*-- Define Bootstrap color variable--*/
+// Code blocks
+$code-block-bg: #fbe576;
+//
+$code-color: #0d45b4;
+
+// Font settings
+$font-family-sans-serif: "Times New Roman";
+$fontsize: 13px;                   // Base font size
+
+
+/*-- scss:rules --*/
+
+h1.page-title {
+  color: black !important;
+  font-family: Merriweather;
+}
+
+h1, .h1, h2, .h2 {
+  color: #0d45b4;
+  font: Merriweather;
+  
+}
+
+h3, .h3 {
+  color: #7d9fe0;
+  font: Merriweather;
+  
+}
+
+h4, .h4 {
+  color: #0f81c2;
+  font: Merriweather;
+  
+}
+
+/* Highlight italic text */
+i, em {
+   color: #ff9d01; // Change to your desired text color
+}
+
+.divider {
+  height: 2px; // Adjust thickness as needed
+  background-color: black; // Divider color
+  margin: 20px 0; // Spacing above and below the divider
+}

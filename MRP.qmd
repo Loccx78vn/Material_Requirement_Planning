@@ -8,9 +8,11 @@ format:
   html:
     code-fold: true
     code-tools: true
+    theme: 
+    - theme.scss
 ---
 
-# Chuẩn bị:
+## Chuẩn bị:
 
 ```{r}
 #Call packages:
@@ -46,9 +48,9 @@ df %>%
     icon = "fa fa-save"
   )
 ```
-# Lập kế hoạch MRP:
+## Lập kế hoạch MRP:
 
-## Dự đoán nhu cầu:
+### Dự đoán nhu cầu:
 
 Sau khi đã có dữ liệu, chúng ta sẽ bắt đầu dự đoán nhu cầu của khách hàng dựa vào dữ liệu trong quá khứ bằng thư viện `modeltime`. Mình đã từng viết 1 bài hướng dẫn cách sử dụng thư viện này ở bài viết [Time series model 2](https://loccx78vn.github.io/Forecasting_time_series_2/Time_series_2.html), bạn có thể xem qua.
 
@@ -111,6 +113,7 @@ Mô hình đưa ra có vẻ khá tốt vì sai số trung bình chỉ ở mức 
 #| echo: false
 #| warning: false
 #| message: false
+#| fig-cap: "Bảng 2: Dự đoán dữ liệu bằng package `modeltime`"
 ## Plot the result:
 forecast_plot<-plot_modeltime_forecast(k %>% 
         group_by(WH),
@@ -135,6 +138,7 @@ forecast_plot %>%
 #| warning: false
 #| message: false
 #| nrow: 2
+#| fig-cap: "Bảng 3: Đánh giá mức độ dự đoán của mô hình"
 ## Create table:
 n<-k %>% filter(.model_desc =="ARIMA(0,0,0)(2,0,1)[7] WITH NON-ZERO MEAN")
 m<-data.frame(Date = as.Date(n$Date),
@@ -240,7 +244,7 @@ Và kế hoạch có thể theo ngày đối với các cửa hàng bách hóa, 
 
 Như vậy, ta cần xác định khi nào hàng sẽ có nguy cơ bị *outstock* để lập kế hoạch cung ứng cho khoảng thời gian là 1 tháng tiếp theo.
 
-## Các thông số của nhà kho:
+### Các thông số của nhà kho:
 
 Mỗi nhà kho sẽ có các thông số đánh giá khác nhau. Đối với nhà kho thuộc dạng *public warehouse* thì họ quan tâm về mức độ lấp đầy chỗ (giống như mua vé xem phim vậy, càng ít chỗ trống nghĩa là doanh thu cao), *private warehouse* thì thường sẽ quan tâm đến các dịch vụ cao cấp hơn như: kho lạnh, phòng cháy chữa cháy, dạng *cross-docking* thì đặc biệt quan tâm đến tốc độ chu chuyển hàng hóa trong kho,... Nhưng về tổng quan, để quản lí hàng hóa trong kho sẽ cần các thông số như:
 
@@ -253,6 +257,7 @@ Mỗi nhà kho sẽ có các thông số đánh giá khác nhau. Đối với nh
 Đầu tiên, ta sẽ tính các giá trị *Lead time* và *Safety stock* cho từng nhà kho.
 
 ```{r}
+#| fig-cap: "Bảng 4: Các thông số đánh giá của từng nhà kho"
 library(dplyr)
 library(knitr)
 
@@ -385,14 +390,15 @@ result<-f("WHB",600,3,500)
 
 Kết quả giả lập được trình bày như sau, trong đó:
 
-- **Starting inv**: là tồn kho đầu ngày (hoặc đầu kì cho tháng/năm). Lượng hàng đầu ngày sẽ bằng lượng hàng cuối ngày hôm trước.
-- **Ending inv**: là tồn kho cuối ngày, được tính bằng hiệu số của lượng hàng đầu ngày và nhu cầu của khách hàng.
-- **Status**: ám chỉ trạng thái của nhà kho, ở đây có 3 dạng trạng thái: *Oke* là khi nhà kho không bị *outstock* và không cần đặt thêm hàng, *Reorder* khi đặt đơn hàng và *Outstock* khi lượng hàng tồn kho không đủ để phục vụ nhu cầu của khách hàng vào ngày đó.
+- *Starting inv*: là tồn kho đầu ngày (hoặc đầu kì cho tháng/năm). Lượng hàng đầu ngày sẽ bằng lượng hàng cuối ngày hôm trước.
+- *Ending inv*: là tồn kho cuối ngày, được tính bằng hiệu số của lượng hàng đầu ngày và nhu cầu của khách hàng.
+- *Status*: ám chỉ trạng thái của nhà kho, ở đây có 3 dạng trạng thái: *Oke* là khi nhà kho không bị *outstock* và không cần đặt thêm hàng, *Reorder* khi đặt đơn hàng và *Outstock* khi lượng hàng tồn kho không đủ để phục vụ nhu cầu của khách hàng vào ngày đó.
 - *Supply*: lượng hàng sẽ nhận từ đơn đặt hàng.
 
 ```{r}
 #| warning: false
 #| message: false
+#| fig-cap: "Bảng 5: Kết quả giả lập của kế hoạch MRP"
 library(reactable)
 library(reactablefmtr)
 library(htmltools)
@@ -452,7 +458,6 @@ reactable(table,
                      }),
     Status = colDef(
               name = "Status",
-              align = "center", 
                      headerStyle = list(background = "#b0b0b0"),
               cell = function(value) {
                 color <- switch(value,
@@ -471,51 +476,48 @@ reactable(table,
 )
 ```
 
-## Thêm safety leadtime:
+### Thêm safety leadtime:
 
 Bây giờ chúng ta đã có kế hoạch dự kiến trong tháng tiếp theo giống ta đã biết trước được khi nào thì nhà kho sẽ bị outstock và dựa vào đó, ta có thể đưa ra phương án để tránh việc này. 
 
-Như trong trường hợp này, nhà kho *B* bị outstock tới tận 16 lận, một con số khá tệ. Là người quản lí kho, ta sẽ đưa ra phương án là đặt hàng trước 1 ngày dự kiến mà lượng hàng tồn kho nhỏ hơn *safety stock*.
+Như trong trường hợp này, nhà kho **B** bị outstock tới tận **16** lận, một con số khá tệ. Là người quản lí kho, ta sẽ đưa ra phương án là đặt hàng trước 1 ngày dự kiến mà lượng hàng tồn kho nhỏ hơn *safety stock*.
+
+#### So sánh giữa 2 cách:
+
+**Kết quả:** Qua biểu đồ dưới đây, ta cũng dễ dàng thấy là việc đặt hàng **trước 1 ngày** hàng tồn kho nhỏ hơn *safety stock* giảm tình trạng *outstock* đáng kể (từ **16** lần xuống còn **6** lần trong tháng). 
+
+Ngoài ra, một điểm đặc biệt là không xảy ra **tình trạng nợ hàng**, nghĩa là cửa hàng của bạn chỉ bị thiếu hàng và chưa đủ thỏa mãn hết nhu cầu trong ngày của khách hàng chớ không bị âm hàng như cách cũ.
 
 ```{r}
 #| echo: false
+#| fig-cap: "Bảng 6: So sánh giữa phương pháp truyền thống và thêm safety leadtime"
 result <- read_excel("my_data.xlsx")
 
 compare<-result %>% 
             mutate(Date = as.Date(Date),
-                   Fulfill = ifelse(Inv_start/Demand < 1,round(Inv_start/Demand,3)*100,100),
-                   Fulfill_safety = ifelse(Inv_start_safety/Demand < 1, round(Inv_start_safety/Demand,3)*100,100)) %>% 
-  select (c(Date,
-            Demand,
-            Fulfill,
-            Fulfill_safety,
+                   Fulfill = ifelse(Inv_start/Demand < 1,round(Inv_start/Demand,3),1),
+                   Fulfill_safety = ifelse(Inv_start_safety/Demand < 1, round(Inv_start_safety/Demand,3),1)) %>% 
+  select (c(Fulfill,
             Stockout,
+            Fulfill_safety,
             Stock_out_safety)) 
                    
-                   
+library(reactablefmtr)             
+compare %>% 
 reactable(
-  compare,
   columns = list(
-    Fulfill = colDef(
+     Fulfill = colDef(
       name = "Normal fulfill",
-      align = "center",
-      cell = function(value) {
-        # Format the value and append the '%' sign
-        formatted_value <- paste0(format(value, nsmall = 1), "%")
-        color <- ifelse(value <= 0, "#e00000", "#008000")
-        htmltools::tags$span(formatted_value, style = paste("color:", color, "; font-weight: bold;"))
-      }
-    ),
-    Fulfill_safety = colDef(
+      cell = data_bars(., 
+                       fill_color = c("#F44336","#4CAF50"),
+                       text_position = "inside-end", 
+                       number_fmt = scales::percent)),
+     Fulfill_safety = colDef(
       name = "Safety fulfill",
-      align = "center",
-      cell = function(value) {
-        # Format the value and append the '%' sign
-        formatted_value <- paste0(format(value, nsmall = 1), "%")
-        color <- ifelse(value <= 0, "#e00000", "#008000")
-        htmltools::tags$span(formatted_value, style = paste("color:", color, "; font-weight: bold;"))
-      }
-    ),
+      cell = data_bars(., 
+                       fill_color =  c("#b0f1a6","#4CAF50"),
+                       text_position = "inside-end", 
+                       number_fmt = scales::percent)),
     Stock_out_safety = colDef(
       name = "Safety Stockout",
       align = "center",
@@ -542,18 +544,18 @@ reactable(
   highlight = TRUE,
   striped = TRUE,
   bordered = TRUE,
-  resizable = TRUE,
-  fullWidth = TRUE
+  resizable = TRUE
 )
 ```
 
+#### Đánh giá bằng line chart:
 
-
-Để so sánh sự quan trọng của *safety leadtime*, mình sẽ sử dụng *line chart* để đánh giá mức độ dịch vụ của nhà kho dựa trên tiêu chí *high service*: càng ít *outstock* thì càng tốt. Qua biểu đồ dưới đây, ta cũng dễ dàng thấy là việc đặt hàng **trước 1 ngày** hàng tồn kho nhỏ hơn *safety stock* giảm tình trạng *outstock* đáng kể (từ **16** lần xuống còn **6** lần trong tháng).
+Để so sánh sự quan trọng của *safety leadtime*, mình sẽ sử dụng *line chart* để đánh giá mức độ dịch vụ của nhà kho dựa trên tiêu chí *high service*: càng ít *outstock* thì càng tốt. Ngoài ra, mình còn thêm vào các đường nét đứt biểu diễn thời điểm ROP
 
 ```{r}
 #| warning: false
 #| message: false
+#| fig-cap: "Bảng 7: So sánh level of service của hai phương pháp"
 # Create time series objects with daily frequency
 library(xts)
 demand_ts <-xts(result$Demand, 
@@ -588,11 +590,12 @@ dygraph(combine) %>%
   dyEvent(event[6], "ROP", labelLoc = "bottom")
 ```
 
-Tuy nhiên nếu xét về tiêu chí tối ưu chi phí - *saving cost* thì ta cần tính toán thêm chi phí của việc *outstock* và chi phí tồn kho - *inventory cost*.
+Tuy nhiên nếu xét về tiêu chí tối ưu chi phí (*saving cost*) thì ta cần tính toán thêm chi phí của việc *outstock* và chi phí tồn kho (*inventory cost*).
 
-Giả sử chi phí của *inventory cost* là 40`$`/sản phẩm và *outstock cost* là 15`$`/sản phẩm thì ta sẽ có bảng so sánh như bảng dưới đây. Kết quả cho thấy phương pháp truyền thống giúp chi phí ở mức thấp hơn. 
+Giả sử chi phí của *inventory cost* là \$40/sản phẩm và *outstock cost* là 15`$`/sản phẩm thì ta sẽ có bảng so sánh như bảng dưới đây. Kết quả cho thấy phương pháp truyền thống giúp chi phí ở mức thấp hơn. 
 
 ```{r}
+#| fig-cap: "Bảng 8: So sánh tổng chi phí giữa hai phương pháp"
 library(gt)
 library(gtExtras)
 gt(result %>% 
@@ -635,7 +638,7 @@ gt(result %>%
   )
 ```
 
-# Kết luận:
+## Kết luận:
 
 Như vậy, ở bài post này chúng ta đã học được cách sử dụng R trong việc xây dựng kế hoạch **MRP** dựa vào dữ liệu quá khứ cũng như so sánh kết quả giữa 2 tiêu chí là: *high service* và *low cost*.
 
@@ -644,6 +647,7 @@ Tiếp theo, ta lại tiếp tục quy trình trên và làm kế hoạch cho c�
 ```{r}
 #| warning: false
 #| message: false
+#| fig-cap: "Bảng 9: Kết quả dự đoán nhu cầu trong 1 tháng tiếp theo"
 ## Gộp dữ liệu từ training set và testing set thành một:
 data_prepared_tbl <- bind_rows(training(splits), 
                                testing(splits))
@@ -720,7 +724,7 @@ Nếu bạn có câu hỏi hay thắc mắc nào, đừng ngần ngại liên h�
         </form>
         <div class="github-button">
             <button>
-                <a href="https://github.com/Loccx78vn" target="_blank" style="color: white; text-decoration: none;">
+                <a href="https://github.com/Loccx78vn/Material_Requirement_Planning" target="_blank" style="color: white; text-decoration: none;">
                     <i class="fab fa-github"></i> View Code on GitHub
                 </a>
             </button>

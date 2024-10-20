@@ -21,6 +21,7 @@ website:
 format:
   html:
     theme: 
-      light: flatly
+    - flatly 
+    - theme.scss
     toc: true
   
