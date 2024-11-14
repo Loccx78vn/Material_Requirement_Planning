@@ -12,8 +12,6 @@ format:
   html:
     code-fold: true
     code-tools: true
-    theme: 
-    - theme.scss
 ---
 
 ## Khi nào xây dựng MRP?:
@@ -30,7 +28,23 @@ Về *Leadtime* sẽ có nhiều cách tính toán và điều này tùy thuộc
 
 Về tổng quan, các thành phần cơ bản trong công thức tính *Leadtime* sẽ gồm:
 
-![Hình 6: Các thành phần trong Lead time](img/leadtime.png)
+
+```{=html}
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="img/leadtime.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  
+  <!-- Picture Name -->
+  <div style="text-align: left; margin-top: 10px;">
+    Hình 6: Các thành phần trong Lead time
+  </div>
+  
+  <!-- Source Link -->
+  <div style="text-align: right; font-style: italic; margin-top: 5px;">
+    Source: <a href="https://posit.co/download/rstudio-desktop/" target="_blank">Rstudio</a>
+  </div>
+</div>
+```
+
 
 Mình có thể chia thành các dạng doanh nghiệp và mỗi doanh nghiệp thì sẽ cần tính toán *leadtime* như thế nào dưới đây:
 
@@ -151,7 +165,22 @@ Ngoài ra, còn có khái niệm về *Safety leadtime* được [@remahariharan
 
 *Safety leadtime* có thể được lựa chọn làm tiêu chí thay thế cho *Safety stock* hoặc thậm chí được ưu tiên với điều kiện dự báo về nhu cầu phải có độ chính xác cao. Số lượng hàng tồn kho an toàn cần thiết hoặc độ dài của *safety leadtime* bị ảnh hưởng bởi mức độ của *uncertainty* mà một đơn vị sản xuất gặp phải.
 
-![Hình 7: Mô tả về Safety Leadtime](img/safetyleadtime.png)
+
+```{=html}
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="img/safetyleadtime.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  
+  <!-- Picture Name -->
+  <div style="text-align: left; margin-top: 10px;">
+    Hình 7: Mô tả về Safety Leadtime
+  </div>
+  
+  <!-- Source Link -->
+  <div style="text-align: right; font-style: italic; margin-top: 5px;">
+    Source: <a href="https://posit.co/download/rstudio-desktop/" target="_blank">Rstudio</a>
+  </div>
+</div>
+```
 
 ### Safety Stock:
 
@@ -163,7 +192,23 @@ $$
 \text{Safety Stock} = \text{Service Level Factor} \times \sqrt{\text{Lead Time}} \times \sigma
 $$
 
-![Hình 8: Mô tả về Reorder point](img/reorder_point.png)
+
+```{=html}
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="img/reorder_point.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  
+  <!-- Picture Name -->
+  <div style="text-align: left; margin-top: 10px;">
+    Hình 8: Mô tả về Reorder point
+  </div>
+  
+  <!-- Source Link -->
+  <div style="text-align: right; font-style: italic; margin-top: 5px;">
+    Source: <a href="https://abcsupplychain.com/safety-stock-formula-calculation/" target="_blank">Link to Image</a>
+  </div>
+</div>
+```
+
 
 Như hình mô tả bên trên từ [@edouardthieuleux2022], bạn sẽ thấy rằng *reorder point* sẽ luôn cao hơn *safety stock* bởi vì *safety stock* là 1 thành phần trong công thức tính *reorder point*. Ngoài ra, cả hai có điểm khác biệt ở mục đích sử dụng, trong đó:
 
@@ -181,4 +226,118 @@ $$
 ROP = \text{Average demand/day} \times \text{Lead time (days)}  + \text{Safety stock} 
 $$
 
-Vậy dựa vào các kiến thức mình vừa đưa ra, chúng ta sẽ bắt đầu xây dựng kế hoạch **MRP** ở trang [Practice in R](MRP.qmd)
+Vậy dựa vào các kiến thức mình vừa đưa ra, chúng ta sẽ bắt đầu xây dựng kế hoạch **MRP** ở trang tiếp theo.
+
+```{=html}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go to Next Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            display: flex;
+            flex-direction: column;  /* Stack content and footnote vertically */
+            justify-content: center;  /* Center content vertically */
+            align-items: center;      /* Center content horizontally */
+            margin: 0;
+            background-color: #f4f4f9;
+            box-sizing: border-box;
+            min-height: 80vh; /* Adjusted to 80vh to ensure it's not too high */
+        }
+
+        /* Container Styling (Main Content) */
+        .container {
+            text-align: center;
+            padding: 20px 40px; /* Adjust padding for more compactness */
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: auto;  /* Auto width to fit content */
+            max-width: 380px;  /* Adjusted max-width for a smaller container */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;  /* Space from the top of the page */
+        }
+
+        /* Link Styling */
+        .link {
+            font-size: 20px;  /* Adjusted font size for readability */
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 12px 30px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .link:hover {
+            color: #0056b3;
+            text-decoration: none;
+            background-color: #e6f0ff;
+        }
+
+        /* Arrow Styling */
+        .arrow {
+            margin-left: 12px;
+            font-size: 24px;
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        .link:hover .arrow {
+            transform: translateX(8px);
+            font-size: 26px;
+        }
+
+        /* Focus State for Accessibility */
+        .link:focus {
+            outline: 2px solid #0056b3;
+        }
+
+        /* Footer Styling (Footnote) */
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;  /* Space between content and footnote */
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Mobile-Friendly Adjustments */
+        @media (max-width: 600px) {
+            .link {
+                font-size: 18px;
+                padding: 8px 15px;  /* Smaller padding for mobile devices */
+            }
+
+            .arrow {
+                font-size: 18px;
+                margin-left: 8px;
+            }
+
+            .container {
+                padding: 15px 30px;  /* Smaller padding on mobile */
+                max-width: 90%;  /* Ensure container fits better on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://loccx78vn.github.io/Material_Requirement_Planning/MRP.html" class="link" tabindex="0">
+            Go to Next Page
+            <span class="arrow">➔</span>
+        </a>
+    </div>
+</body>
+</html>
+```

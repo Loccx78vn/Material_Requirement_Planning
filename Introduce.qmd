@@ -13,8 +13,6 @@ format:
   html:
     code-fold: true
     code-tools: true
-    theme: 
-    - theme.scss 
 ---
 
 ## Giới thiệu:
@@ -23,7 +21,21 @@ Hôm nay chúng ta sẽ học về một hoạt động quan trọng trong các 
 
 Nhắc lại bài cũ, từ nghiên cứu của [@nataliaszozda2013], ta đã học về một *function* quan trọng là [Demand planning](https://loccx78vn.github.io/Forecasting_time_series/) và cách sử dụng R để dự đoán được nhu cầu của khách hàng trong tương lai. Vậy sau khi đã có số liệu dự đoán, ta sẽ bắt đầu xây dựng **kế hoạch phân phối** nhằm đảm bảo đủ lượng hàng hóa trưng bày bán cho khách hàng ở các cửa hàng, trung tâm thương mại, siêu thị,...
 
-![Hình 1: Tổng quan các hoạt động quan trọng trong Supply Chain Management](img/planning.png){fig-align="center"}
+```{=html}
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="img/planning.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  
+  <!-- Picture Name -->
+  <div style="text-align: left; margin-top: 10px;">
+    Hình 1: Tổng quan các hoạt động quan trọng trong Supply Chain Management
+  </div>
+  
+  <!-- Source Link -->
+  <div style="text-align: right; font-style: italic; margin-top: 5px;">
+    Source: <a href="https://www.semanticscholar.org/paper/THE-EFFECT-OF-SUPPLY-CHAIN-DECOUPLING-POINTS-ON-.-Szozda/923977fce6efed39056f65e816cc307a71ee51f1" target="_blank">Link to Image</a>
+  </div>
+</div>
+```
 
 Vậy hàng hóa lấy ở đâu để phân phối ? Hàng hóa thường sẽ lấy từ nhà kho gần nhất để giảm chi phí vận chuyển. Nhưng nếu hàng hóa ở kho không đủ thì ta cần gửi yêu cầu cho phòng **Production (Sản xuất)** để họ lên kế hoạch sản xuất ra hàng hóa mới bù vào khoảng thiếu hụt. Sau khi đã xác định kế hoạch rõ ràng, phòng **Production (Sản xuất)** sẽ gửi yêu cầu cho phòng **Procument (Thu mua)** để mua các nguyên vật liệu cần thiết cho việc sản xuất.
 
@@ -37,7 +49,21 @@ Vì vậy, để xử lí công việc này, các nhà chuyên gia đã đề xu
 
 Về định nghĩa, theo [@davidessex] ,**MRP** có thể hiểu là kế hoạch yêu cầu vật liệu và là hệ thống tính toán các vật liệu và linh kiện cần thiết cho sản xuất. Nó bao gồm ba bước: kiểm kê hiện có, xác định vật liệu cần thêm, và lập kế hoạch sản xuất hoặc mua sắm.
 
-![Hình 2: Phần mềm MRP Fishbowl](img/fishbowl.jpg){width=80%}
+```{=html}
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="img/fishbowl.jpg" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  
+  <!-- Picture Name -->
+  <div style="text-align: left; margin-top: 10px;">
+    Hình 2: Phần mềm MRP Fishbowl
+  </div>
+  
+  <!-- Source Link -->
+  <div style="text-align: right; font-style: italic; margin-top: 5px;">
+    Source: <a href="https://www.fishbowlinventory.com/blog/mrp-software" target="_blank">Link to Image</a>
+  </div>
+</div>
+```
 
 Như hình trên là ứng dụng **Fishbowl** - được thành lập vào năm 2001 bởi David Williams và một nhóm các nhà phát triển phần mềm tại Utah, Hoa Kỳ. Mục tiêu ban đầu của công ty là tạo ra một giải pháp phần mềm giúp các doanh nghiệp nhỏ và vừa quản lý kho và quy trình sản xuất một cách hiệu quả hơn.
 
@@ -235,24 +261,6 @@ bom_data %>%
 
 Nhưng thông thường, người ta sẽ trình bày **BOM** dưới dạng hình cây như này, khá giống *Decision tree* - một mô hình *Machine Learning*. Vì dụ ta có quy trình làm bánh pía như sau:
 
-**Bước 1**: Chuẩn bị phần nhân:
-
--   Đậu xanh: Ngâm đậu xanh qua đêm, sau đó hấp chín và xay nhuyễn.
--   Thịt heo: Nếu sử dụng, xào thịt heo với một chút gia vị cho chín. Trộn đều với đậu xanh đã xay, thêm hạt sen (nếu dùng), mứt (nếu thích) và trộn đều cho đến khi hỗn hợp mịn.
--   Chia nhân thành các phần nhỏ, viên tròn và để nguội. Nếu có trứng muối, bạn có thể đặt vào giữa viên nhân.
-
-**Bước 2**: Chuẩn bị phần vỏ:
-
--   Trộn bột mì, đường lại với nhau.
--   Từ từ thêm dầu ăn và nước vào bột, nhào cho đến khi bột mịn và không dính tay.
--   Chia bột thành các phần nhỏ tương ứng với số viên nhân.
-
-**Bước 3**: Tạo hình bánh: - Cán mỏng từng miếng bột ra, sau đó đặt viên nhân vào giữa. - Gói kín lại và vo tròn bánh cho đẹp.
-
-**Bước 4**: Nướng bánh: - Làm nóng lò ở 180 độ C. - Đặt bánh lên khay nướng có lót giấy nến. - Nướng khoảng 20-25 phút hoặc cho đến khi bánh có màu vàng đẹp.
-
-**Bước 5**:. Hoàn thiện: - Để bánh nguội trước khi thưởng thức. Bánh pía ngon hơn khi để nguội.
-
 ```{r}
 #| warning: false
 #| message: false
@@ -310,7 +318,22 @@ grViz("
 
 ```
 
-![Hình 4: BOM diagram of Banh Pia](img/BOM.png){width = 80%} 
+
+```{=html}
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="img/BOM.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  
+  <!-- Picture Name -->
+  <div style="text-align: left; margin-top: 10px;">
+    Hình 4: BOM diagram of Banh Pia
+  </div>
+  
+  <!-- Source Link -->
+  <div style="text-align: right; font-style: italic; margin-top: 5px;">
+    Source: <a https://posit.co/download/rstudio-desktop/" target="_blank">Rstudio</a>
+  </div>
+</div>
+```
 
 **Mục tiêu:** *giúp quản lý quy trình sản xuất hiệu quả hơn, đảm bảo rằng tất cả các nguyên liệu cần thiết đều có sẵn và đúng thời điểm, đồng thời giảm thiểu rủi ro về việc thiếu hụt nguyên liệu.*
 
@@ -322,7 +345,22 @@ Về lý thuyết xây dựng kế hoạch **MRP** không khó, bạn chỉ cầ
 
 Theo nghiên cứu của[@baskaran42018], tác giả đề cập đến các vấn đề thường gặp đối với **MRP**:
 
-![Hình 5: Các vấn đề thường gặp khi dùng MRP](img/commonproblem.png){fig-align="center"}
+```{=html}
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="img/commonproblem.png" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+  
+  <!-- Picture Name -->
+  <div style="text-align: left; margin-top: 10px;">
+    Hình 5: Các vấn đề thường gặp khi dùng MRP
+  </div>
+  
+  <!-- Source Link -->
+  <div style="text-align: right; font-style: italic; margin-top: 5px;">
+    Source: <a href="https://www.fishbowlinventory.com/blog/mrp-software" target="_blank">Link to Image</a>
+  </div>
+</div>
+```
+
 
 Nếu bạn lười đọc, mình sẽ tóm tắt lại:
 
@@ -483,3 +521,120 @@ $$
 Giả sử, bạn dự đoán tháng sau có 1000 đơn hàng, bạn đã có 200 *On-hand inventory* và 300 *Scheduled receipt* vậy thì bạn chỉ cần đặt thêm nguyên vật liệu để sản xuất đủ 500 đơn hàng nữa là xong. Đó cũng chính là số lượng cần xác định trong kế hoạch **MRP**.
 
 Tiếp theo ta sẽ tìm hiểu thêm về khái niệm *Safety stock* và *reorder point* ở trang [Thời gian xây dựng MRP](Time.qmd)
+
+
+
+```{=html}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go to Next Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            display: flex;
+            flex-direction: column;  /* Stack content and footnote vertically */
+            justify-content: center;  /* Center content vertically */
+            align-items: center;      /* Center content horizontally */
+            margin: 0;
+            background-color: #f4f4f9;
+            box-sizing: border-box;
+            min-height: 80vh; /* Adjusted to 80vh to ensure it's not too high */
+        }
+
+        /* Container Styling (Main Content) */
+        .container {
+            text-align: center;
+            padding: 20px 40px; /* Adjust padding for more compactness */
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: auto;  /* Auto width to fit content */
+            max-width: 380px;  /* Adjusted max-width for a smaller container */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;  /* Space from the top of the page */
+        }
+
+        /* Link Styling */
+        .link {
+            font-size: 20px;  /* Adjusted font size for readability */
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 12px 30px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .link:hover {
+            color: #0056b3;
+            text-decoration: none;
+            background-color: #e6f0ff;
+        }
+
+        /* Arrow Styling */
+        .arrow {
+            margin-left: 12px;
+            font-size: 24px;
+            transition: transform 0.3s ease, font-size 0.3s ease;
+        }
+
+        .link:hover .arrow {
+            transform: translateX(8px);
+            font-size: 26px;
+        }
+
+        /* Focus State for Accessibility */
+        .link:focus {
+            outline: 2px solid #0056b3;
+        }
+
+        /* Footer Styling (Footnote) */
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;  /* Space between content and footnote */
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Mobile-Friendly Adjustments */
+        @media (max-width: 600px) {
+            .link {
+                font-size: 18px;
+                padding: 8px 15px;  /* Smaller padding for mobile devices */
+            }
+
+            .arrow {
+                font-size: 18px;
+                margin-left: 8px;
+            }
+
+            .container {
+                padding: 15px 30px;  /* Smaller padding on mobile */
+                max-width: 90%;  /* Ensure container fits better on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://loccx78vn.github.io/Material_Requirement_Planning/Time.html" class="link" tabindex="0">
+            Go to Next Page
+            <span class="arrow">➔</span>
+        </a>
+    </div>
+</body>
+</html>
+```
+
