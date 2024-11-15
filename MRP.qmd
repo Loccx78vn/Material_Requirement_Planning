@@ -1,5 +1,5 @@
 ---
-title: "Giới thiệu"
+title: "Thực hành trong R"
 subtitle: "Việt Nam, 2024"
 author: "Cao Xuân Lộc"
 date: "2024-10-06"

@@ -540,7 +540,7 @@ Tiếp theo ta sẽ tìm hiểu thêm về khái niệm *Safety stock* và *reor
             justify-content: center;  /* Center content vertically */
             align-items: center;      /* Center content horizontally */
             margin: 0;
-            background-color: #f4f4f9;
+            background-color: $secondary-color;
             box-sizing: border-box;
             min-height: 80vh; /* Adjusted to 80vh to ensure it's not too high */
         }
