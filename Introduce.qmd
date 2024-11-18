@@ -356,7 +356,7 @@ Theo nghiên cứu của[@baskaran42018], tác giả đề cập đến các v�
   
   <!-- Source Link -->
   <div style="text-align: right; font-style: italic; margin-top: 5px;">
-    Source: <a href="https://www.fishbowlinventory.com/blog/mrp-software" target="_blank">Link to Image</a>
+    Source: <a href="https://www.researchgate.net/publication/278727555_Influence_of_the_demand_information_quality_on_planning_process_accuracy_in_supply_chain_Case_studies" target="_blank">Link to Image</a>
   </div>
 </div>
 ```

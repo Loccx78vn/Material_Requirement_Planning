@@ -25,7 +25,6 @@ pacman::p_load(rio,
                )
 ```
 
-
 Dưới đây là tệp dữ liệu về nhu cầu của khách hàng ở 3 nhà kho khác nhau. Bạn có thể nhấn vào nút dưới đây để tải về.
 
 ```{r}
@@ -46,6 +45,7 @@ df %>%
     icon = "fa fa-save"
   )
 ```
+
 ## Lập kế hoạch MRP:
 
 ### Dự đoán nhu cầu:
@@ -104,7 +104,6 @@ k<-modeltime_tbl %>%
 Mô hình đưa ra có vẻ khá tốt vì sai số trung bình chỉ ở mức 5% đối với nhà kho A và C, nhà kho B thì tệ hơn một chút với mức 10%.
 
 ::: panel-tabset
-
 ## Plot:
 
 ```{r}
@@ -233,10 +232,10 @@ Vậy chúng ta đã có dữ liệu đầu vào là dự đoán nhu cầu. Ti�
 
 Thông thường, kế hoạch cung ứng chỉ gồm **4 thông tin** đơn giản là:
 
-- Địa điểm bốc hàng.
-- Địa điểm giao hàng.
-- Loại hàng hóa.
-- Số lượng hàng.
+-   Địa điểm bốc hàng.
+-   Địa điểm giao hàng.
+-   Loại hàng hóa.
+-   Số lượng hàng.
 
 Và kế hoạch có thể theo ngày đối với các cửa hàng bách hóa, siêu thị hoặc theo tuần đối với các nhà kho. Ngoài ra, còn tùy vào mặt hàng là hàng hóa gì, nhu cầu của hàng hóa như thể nào cũng ảnh hưởng đến thời gian giao hàng như: hàng bán chạy thì cần cung ứng hằng ngày, hàng ế ẩm thì có khi cả tháng mới nhập hoặc xuất một lần.
 
@@ -246,11 +245,11 @@ Như vậy, ta cần xác định khi nào hàng sẽ có nguy cơ bị *outstoc
 
 Mỗi nhà kho sẽ có các thông số đánh giá khác nhau. Đối với nhà kho thuộc dạng *public warehouse* thì họ quan tâm về mức độ lấp đầy chỗ (giống như mua vé xem phim vậy, càng ít chỗ trống nghĩa là doanh thu cao), *private warehouse* thì thường sẽ quan tâm đến các dịch vụ cao cấp hơn như: kho lạnh, phòng cháy chữa cháy, dạng *cross-docking* thì đặc biệt quan tâm đến tốc độ chu chuyển hàng hóa trong kho,... Nhưng về tổng quan, để quản lí hàng hóa trong kho sẽ cần các thông số như:
 
-- *Mean of demand*: nhu cầu trung bình theo ngày/tháng/năm của sản phẩm.
+-   *Mean of demand*: nhu cầu trung bình theo ngày/tháng/năm của sản phẩm.
 
-- *Standard deviation of demand*: phương sai của sản phẩm.
+-   *Standard deviation of demand*: phương sai của sản phẩm.
 
-- *Safety stock* và *Lead time*.
+-   *Safety stock* và *Lead time*.
 
 Đầu tiên, ta sẽ tính các giá trị *Lead time* và *Safety stock* cho từng nhà kho.
 
@@ -300,13 +299,13 @@ safety_stock_tbl %>%
 
 Sau khi đã có các thông số cần thiết, chúng ta sẽ bắt đầu bước **simulation - giả lập** cho số lượng hàng tồn kho trong gần 1 tháng tiếp theo. Ở đây mình sẽ xây dựng kế hoạch cho nhà kho *B*. Trong đó, hàm dưới đây mình viết giúp bạn có thể tính toán cho nhiều trường hợp với 4 đối số:
 
-- *Mã nhà kho*: trong bộ dữ liệu này sẽ có 3 nhà kho với các mã: "WHA", "WHB", "WHC". Ở đây, mình đặt `warehouse = "WHB"`.
+-   *Mã nhà kho*: trong bộ dữ liệu này sẽ có 3 nhà kho với các mã: "WHA", "WHB", "WHC". Ở đây, mình đặt `warehouse = "WHB"`.
 
-- *Batch order*: là số lượng hàng đặt từ *supplier*. Tùy vào đặc tính của sản phẩm, số lượng đặt hàng có thể chênh lệch so với số lượng mà bạn cần. Ví dụ, bạn chỉ cần 450 tấn là vừa đủ nhưng 1 lô hàng mà nhà cung cấp sản xuất sẽ là 500 tấn (quy mô thấp hơn thì chi phí/bao sẽ cao hơn) nên bạn chỉ có thể đặt 500 tấn chứ đặt 450 thì 2 bên sẽ không thỏa thuận được. Ở đây mình đặt `quantity = 600`.
+-   *Batch order*: là số lượng hàng đặt từ *supplier*. Tùy vào đặc tính của sản phẩm, số lượng đặt hàng có thể chênh lệch so với số lượng mà bạn cần. Ví dụ, bạn chỉ cần 450 tấn là vừa đủ nhưng 1 lô hàng mà nhà cung cấp sản xuất sẽ là 500 tấn (quy mô thấp hơn thì chi phí/bao sẽ cao hơn) nên bạn chỉ có thể đặt 500 tấn chứ đặt 450 thì 2 bên sẽ không thỏa thuận được. Ở đây mình đặt `quantity = 600`.
 
-- *Leadtime*: khái niệm này mình cũng đề cập ở trên nhưng ở đây bạn có thể cân nhắc việc cộng thêm 1 khoảng *safety leadtime* để nâng cao hiệu quả công việc. Ví dụ, leadtime của nhà kho *C* là 2.5 ngày thì mình có thể đặt hàng sớm trước 1 ngày so với ngày dự kiến *ROP*.
+-   *Leadtime*: khái niệm này mình cũng đề cập ở trên nhưng ở đây bạn có thể cân nhắc việc cộng thêm 1 khoảng *safety leadtime* để nâng cao hiệu quả công việc. Ví dụ, leadtime của nhà kho *C* là 2.5 ngày thì mình có thể đặt hàng sớm trước 1 ngày so với ngày dự kiến *ROP*.
 
-- *Starting inventory*: lượng hàng tồn kho đầu kì. Ở đây mình đặt `inv_start = 500`.
+-   *Starting inventory*: lượng hàng tồn kho đầu kì. Ở đây mình đặt `inv_start = 500`.
 
 ```{r}
 long_df<-df %>% 
@@ -390,10 +389,10 @@ result<-f("WHB",600,3,500)
 
 Kết quả giả lập được trình bày như sau, trong đó:
 
-- *Starting inv*: là tồn kho đầu ngày (hoặc đầu kì cho tháng/năm). Lượng hàng đầu ngày sẽ bằng lượng hàng cuối ngày hôm trước.
-- *Ending inv*: là tồn kho cuối ngày, được tính bằng hiệu số của lượng hàng đầu ngày và nhu cầu của khách hàng.
-- *Status*: ám chỉ trạng thái của nhà kho, ở đây có 3 dạng trạng thái: *Oke* là khi nhà kho không bị *outstock* và không cần đặt thêm hàng, *Reorder* khi đặt đơn hàng và *Outstock* khi lượng hàng tồn kho không đủ để phục vụ nhu cầu của khách hàng vào ngày đó.
-- *Supply*: lượng hàng sẽ nhận từ đơn đặt hàng.
+-   *Starting inv*: là tồn kho đầu ngày (hoặc đầu kì cho tháng/năm). Lượng hàng đầu ngày sẽ bằng lượng hàng cuối ngày hôm trước.
+-   *Ending inv*: là tồn kho cuối ngày, được tính bằng hiệu số của lượng hàng đầu ngày và nhu cầu của khách hàng.
+-   *Status*: ám chỉ trạng thái của nhà kho, ở đây có 3 dạng trạng thái: *Oke* là khi nhà kho không bị *outstock* và không cần đặt thêm hàng, *Reorder* khi đặt đơn hàng và *Outstock* khi lượng hàng tồn kho không đủ để phục vụ nhu cầu của khách hàng vào ngày đó.
+-   *Supply*: lượng hàng sẽ nhận từ đơn đặt hàng.
 
 ```{r}
 #| warning: false
@@ -478,13 +477,13 @@ reactable(table,
 
 ### Thêm safety leadtime:
 
-Bây giờ chúng ta đã có kế hoạch dự kiến trong tháng tiếp theo giống ta đã biết trước được khi nào thì nhà kho sẽ bị outstock và dựa vào đó, ta có thể đưa ra phương án để tránh việc này. 
+Bây giờ chúng ta đã có kế hoạch dự kiến trong tháng tiếp theo giống ta đã biết trước được khi nào thì nhà kho sẽ bị outstock và dựa vào đó, ta có thể đưa ra phương án để tránh việc này.
 
 Như trong trường hợp này, nhà kho **B** bị outstock tới tận **16** lận, một con số khá tệ. Là người quản lí kho, ta sẽ đưa ra phương án là đặt hàng trước 1 ngày dự kiến mà lượng hàng tồn kho nhỏ hơn *safety stock*.
 
 #### So sánh giữa 2 cách:
 
-**Kết quả:** Qua biểu đồ dưới đây, ta cũng dễ dàng thấy là việc đặt hàng **trước 1 ngày** hàng tồn kho nhỏ hơn *safety stock* giảm tình trạng *outstock* đáng kể (từ **16** lần xuống còn **6** lần trong tháng). 
+**Kết quả:** Qua biểu đồ dưới đây, ta cũng dễ dàng thấy là việc đặt hàng **trước 1 ngày** hàng tồn kho nhỏ hơn *safety stock* giảm tình trạng *outstock* đáng kể (từ **16** lần xuống còn **6** lần trong tháng).
 
 Ngoài ra, một điểm đặc biệt là không xảy ra **tình trạng nợ hàng**, nghĩa là cửa hàng của bạn chỉ bị thiếu hàng và chưa đủ thỏa mãn hết nhu cầu trong ngày của khách hàng chớ không bị âm hàng như cách cũ.
 
@@ -590,12 +589,163 @@ dygraph(combine) %>%
   dyEvent(event[6], "ROP", labelLoc = "bottom")
 ```
 
-Tuy nhiên nếu xét về tiêu chí tối ưu chi phí (*saving cost*) thì ta cần tính toán thêm chi phí của việc *outstock* và chi phí tồn kho (*inventory cost*).
+Sau khi đã có lịch đặt hàng dự kiến của *finished product*, ta sẽ xây dựng tiếp các kế hoạch đặt hàng cho *raw material* hoặc *components*. Công thức tính toán ngày sẽ là:
 
-Giả sử chi phí của *inventory cost* là \$40/sản phẩm và *outstock cost* là 15`$`/sản phẩm thì ta sẽ có bảng so sánh như bảng dưới đây. Kết quả cho thấy phương pháp truyền thống giúp chi phí ở mức thấp hơn. 
+$$
+\text{Reorder day of material} = \text{Reorder day of finished product} - \text{Lead time of material}
+$$
+
+::: callout-tip
+*Leadtime* của mỗi *material* sẽ được thể hiện trong bảng **BOM** mà mình đã trình bày ở trang trước.
+:::
+
+Ví dụ ta cần 2 *material* với *leadtime* là 3 ngày để tạo ra 1 *component* và cuối cùng tốn thêm 2 ngày nữa để tạo ra *finished product* và mình sẽ sử dụng package `ggweekly` của [gadenbuie](https://github.com/gadenbuie/ggweekly) để xây dựng thời khoa biểu cho lịch đặt hàng. Dựa vào lịch trình này, ta sẽ biết được khi nào cần đặt hàng và sẽ có thể thông báo qua điện thoại nếu bạn sử dụng package `googlecalendar` của [benjcunningham](https://github.com/benjcunningham/googlecalendar) với API của Google.
 
 ```{r}
-#| fig-cap: "Bảng 8: So sánh tổng chi phí giữa hai phương pháp"
+# Step 1: Create calendar:
+library(ggweekly)
+calendar<-result |> 
+  select(c(Date, ROP_safety)) |> 
+  filter(ROP_safety == 1) |> 
+   rename(Finished_product = ROP_safety) |> 
+  mutate(Finished_product = 600) 
+ 
+component1<-calendar |> 
+  rename(Component = Finished_product) |> 
+  mutate(Date = Date - days(2),
+         Component = 600)
+
+material1<-component1 |> 
+  rename(Material_1 = Component) |>
+  mutate(Date = Date - days(2),
+         Material_1 = 600*2)
+
+material2<-component1 |> 
+  rename(Material_2 = Component) |>
+  mutate(Date = Date - days(3),
+         Material_2 = 600*3)
+
+
+# Step 2: Create a full sequence of dates
+calendar$Date <- as.Date(calendar$Date)
+material1$Date <- as.Date(material1$Date)
+
+full_date_sequence <- seq.Date(from = min(material1$Date), to = max(calendar$Date), 
+                               by = "day")
+
+full_dates <- data.frame(Date = full_date_sequence)
+
+# Step 3: Join the full sequence with your data
+final_result <- full_dates |>
+  left_join(calendar, by = "Date") |>
+  left_join(component1, by = "Date") |>
+  left_join(material1, by = "Date") |>
+  left_join(material2, by = "Date") |>
+  arrange(desc(Date)) 
+
+final_result <- final_result %>%
+  mutate(across(c(Finished_product,Component, Material_1, Material_2), ~replace(., is.na(.), 0)))
+```
+
+::: panel-tabset
+
+##### Table
+
+```{r}
+#| fig-cap: "Bảng 8: Bảng kết quả MRP"
+# Step 4: Create table to present the result:
+final_result |>
+  mutate(Date = as.Date(Date)) |> 
+  reactable(
+    columns = list(
+      Finished_product = colDef(
+        name = "Finished product",
+        cell = data_bars(final_result, 
+                         fill_color = c("#ffffff","#4CAF50"),
+                         text_position = "inside-end")
+      ),
+      Component = colDef(
+        name = "Component",
+        cell = data_bars(final_result, 
+                         fill_color = c("#ffffff","#0dbaee"),
+                         text_position = "inside-end")
+      ),
+      Material_1 = colDef(
+        name = "Material 1",
+        cell = data_bars(final_result, 
+                         fill_color = c("#ffffff","#f87d1a"),
+                         text_position = "inside-end")
+      ),
+      Material_2 = colDef(
+        name = "Material 2",
+        cell = data_bars(final_result, 
+                         fill_color = c("#ffffff","#0e4cc5"),
+                         text_position = "inside-end")
+      )
+    ),
+    defaultPageSize = 10,
+    highlight = TRUE,
+    striped = TRUE,
+    bordered = TRUE,
+    resizable = TRUE
+  )
+```
+
+##### Calendar:
+
+```{r}
+#| fig-cap: "Bảng 9: Thời khóa biểu cho kế hoạch MRP"
+#| warning: false
+#| message: false
+library(dplyr)
+
+# Create the table with label, color, and fill columns
+project_days <- final_result %>%
+  mutate(
+    label = paste(
+      ifelse(Finished_product != 0, paste("Finished_product:", Finished_product), ""),
+      ifelse(Component != 0, paste("Component:", Component), ""),
+      ifelse(Material_1 != 0, paste("Material_1:", Material_1), ""),
+      ifelse(Material_2 != 0, paste("Material_2:", Material_2), ""),
+      sep = "\n"  # This will insert a newline between each label part
+    ) %>% 
+    # Trim leading/trailing spaces from label
+    str_trim(),
+    
+    color = case_when(
+      !is.na(Finished_product) & Finished_product != 0 ~ "#4CAF50", 
+      !is.na(Component) & Component != 0 ~ "#0dbaee",         
+      !is.na(Material_1) & Material_1 != 0 ~ "#f87d1a",        
+      !is.na(Material_2) & Material_2 != 0 ~ "#0e4cc5",        
+      TRUE ~ "#ffffff"
+    ),
+    fill = color
+  ) %>%
+  select(day = Date, label, color, fill) %>%
+  mutate(day = as.character(day))  # Convert day to character
+
+library(ggweekly)
+
+ggweek_planner(
+  start_day = min(final_result$Date), 
+  end_day = max(final_result$Date), 
+  highlight_days = project_days,
+  show_month_boundaries = FALSE, 
+  show_month_start_day = FALSE,
+  week_start = "epiweek",
+  week_start_label = "week",
+  weekend_fill = "#FFFFFF"
+) + 
+  ggplot2::ggtitle("The MRP calendar")  
+```
+:::
+
+Tuy nhiên nếu xét về tiêu chí tối ưu chi phí (*saving cost*) thì ta cần tính toán thêm chi phí của việc *outstock* và chi phí tồn kho (*inventory cost*).
+
+Giả sử chi phí của *inventory cost* là \$40/sản phẩm và *outstock cost* là \$15/sản phẩm thì ta sẽ có bảng so sánh như bảng dưới đây. Kết quả cho thấy phương pháp truyền thống giúp chi phí ở mức thấp hơn.
+
+```{r}
+#| fig-cap: "Bảng 10: So sánh tổng chi phí giữa hai phương pháp"
 library(gt)
 library(gtExtras)
 gt(result %>% 
@@ -642,7 +792,7 @@ gt(result %>%
 
 Như vậy, ở bài post này chúng ta đã học được cách sử dụng R trong việc xây dựng kế hoạch **MRP** dựa vào dữ liệu quá khứ cũng như so sánh kết quả giữa 2 tiêu chí là: *high service* và *low cost*.
 
-Tiếp theo, ta lại tiếp tục quy trình trên và làm kế hoạch cho các tháng sau.
+Tiếp theo, ta lại tiếp tục quy trình trên và làm kế hoạch cho các tháng sau. Chúc bạn may mắn hoàn thành task của mình !!!.
 
 ```{r}
 #| warning: false
@@ -685,8 +835,7 @@ refit_tbl %>%
   )
 ```
 
-
-Như vậy, chúng ta đã được học về thuật toán Genetic và mô hình MILP cũng như cách thực hiện trong Rstudio. 
+Như vậy, chúng ta đã được học về thuật toán Genetic và mô hình MILP cũng như cách thực hiện trong Rstudio.
 
 Nếu bạn có câu hỏi hay thắc mắc nào, đừng ngần ngại liên hệ với mình qua Gmail. Bên cạnh đó, nếu bạn muốn xem lại các bài viết trước đây của mình, hãy nhấn vào hai nút dưới đây để truy cập trang **Rpubs** hoặc mã nguồn trên **Github**. Rất vui được đồng hành cùng bạn, hẹn gặp lại! 😄😄😄
 
